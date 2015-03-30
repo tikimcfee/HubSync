@@ -1,0 +1,502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7483389A1AC9C0C300C3F5FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338991AC9C0C300C3F5FD /* AppDelegate.m */; };
+		7483389C1AC9C0C300C3F5FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7483389B1AC9C0C300C3F5FD /* main.m */; };
+		7483389F1AC9C0C300C3F5FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7483389E1AC9C0C300C3F5FD /* ViewController.m */; };
+		748338A11AC9C0C300C3F5FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 748338A01AC9C0C300C3F5FD /* Images.xcassets */; };
+		748338A41AC9C0C300C3F5FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 748338A21AC9C0C300C3F5FD /* Main.storyboard */; };
+		748338B01AC9C0C300C3F5FD /* HubSyncTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338AF1AC9C0C300C3F5FD /* HubSyncTests.m */; };
+		748338C91AC9C19C00C3F5FD /* CSChatMessageRealmModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338BE1AC9C19C00C3F5FD /* CSChatMessageRealmModel.m */; };
+		748338CA1AC9C19C00C3F5FD /* CSComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338C01AC9C19C00C3F5FD /* CSComment.m */; };
+		748338CB1AC9C19C00C3F5FD /* CSCommentRealmModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338C21AC9C19C00C3F5FD /* CSCommentRealmModel.m */; };
+		748338CC1AC9C19C00C3F5FD /* CSPeerHistoryRealmModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338C41AC9C19C00C3F5FD /* CSPeerHistoryRealmModel.m */; };
+		748338CD1AC9C19C00C3F5FD /* CSTaskRealmModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338C61AC9C19C00C3F5FD /* CSTaskRealmModel.m */; };
+		748338CE1AC9C19C00C3F5FD /* CSTaskTransientObjectStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338C81AC9C19C00C3F5FD /* CSTaskTransientObjectStore.m */; };
+		748338D21AC9C3B400C3F5FD /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 748338D11AC9C3B300C3F5FD /* libc++.dylib */; };
+		748338D41AC9C4AA00C3F5FD /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748338D31AC9C4AA00C3F5FD /* Realm.framework */; };
+		748338D61AC9C4D800C3F5FD /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 748338D31AC9C4AA00C3F5FD /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		748338AA1AC9C0C300C3F5FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7483388B1AC9C0C300C3F5FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 748338921AC9C0C300C3F5FD;
+			remoteInfo = HubSync;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		748338D51AC9C4CD00C3F5FD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				748338D61AC9C4D800C3F5FD /* Realm.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		748338931AC9C0C300C3F5FD /* HubSync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HubSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		748338971AC9C0C300C3F5FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		748338981AC9C0C300C3F5FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		748338991AC9C0C300C3F5FD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7483389B1AC9C0C300C3F5FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7483389D1AC9C0C300C3F5FD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7483389E1AC9C0C300C3F5FD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		748338A01AC9C0C300C3F5FD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		748338A31AC9C0C300C3F5FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		748338A91AC9C0C300C3F5FD /* HubSyncTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HubSyncTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		748338AE1AC9C0C300C3F5FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		748338AF1AC9C0C300C3F5FD /* HubSyncTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HubSyncTests.m; sourceTree = "<group>"; };
+		748338BD1AC9C19C00C3F5FD /* CSChatMessageRealmModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSChatMessageRealmModel.h; sourceTree = "<group>"; };
+		748338BE1AC9C19C00C3F5FD /* CSChatMessageRealmModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSChatMessageRealmModel.m; sourceTree = "<group>"; };
+		748338BF1AC9C19C00C3F5FD /* CSComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSComment.h; sourceTree = "<group>"; };
+		748338C01AC9C19C00C3F5FD /* CSComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSComment.m; sourceTree = "<group>"; };
+		748338C11AC9C19C00C3F5FD /* CSCommentRealmModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCommentRealmModel.h; sourceTree = "<group>"; };
+		748338C21AC9C19C00C3F5FD /* CSCommentRealmModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCommentRealmModel.m; sourceTree = "<group>"; };
+		748338C31AC9C19C00C3F5FD /* CSPeerHistoryRealmModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPeerHistoryRealmModel.h; sourceTree = "<group>"; };
+		748338C41AC9C19C00C3F5FD /* CSPeerHistoryRealmModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPeerHistoryRealmModel.m; sourceTree = "<group>"; };
+		748338C51AC9C19C00C3F5FD /* CSTaskRealmModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTaskRealmModel.h; sourceTree = "<group>"; };
+		748338C61AC9C19C00C3F5FD /* CSTaskRealmModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTaskRealmModel.m; sourceTree = "<group>"; };
+		748338C71AC9C19C00C3F5FD /* CSTaskTransientObjectStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTaskTransientObjectStore.h; sourceTree = "<group>"; };
+		748338C81AC9C19C00C3F5FD /* CSTaskTransientObjectStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTaskTransientObjectStore.m; sourceTree = "<group>"; };
+		748338D11AC9C3B300C3F5FD /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		748338D31AC9C4AA00C3F5FD /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = ThirdParty/Realm.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		748338901AC9C0C300C3F5FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				748338D41AC9C4AA00C3F5FD /* Realm.framework in Frameworks */,
+				748338D21AC9C3B400C3F5FD /* libc++.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		748338A61AC9C0C300C3F5FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7483388A1AC9C0C300C3F5FD = {
+			isa = PBXGroup;
+			children = (
+				748338D11AC9C3B300C3F5FD /* libc++.dylib */,
+				748338951AC9C0C300C3F5FD /* HubSync */,
+				748338AC1AC9C0C300C3F5FD /* HubSyncTests */,
+				748338941AC9C0C300C3F5FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		748338941AC9C0C300C3F5FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				748338931AC9C0C300C3F5FD /* HubSync.app */,
+				748338A91AC9C0C300C3F5FD /* HubSyncTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		748338951AC9C0C300C3F5FD /* HubSync */ = {
+			isa = PBXGroup;
+			children = (
+				748338B91AC9C14000C3F5FD /* Frameworks */,
+				748338981AC9C0C300C3F5FD /* AppDelegate.h */,
+				748338BC1AC9C19C00C3F5FD /* Models */,
+				748338991AC9C0C300C3F5FD /* AppDelegate.m */,
+				7483389D1AC9C0C300C3F5FD /* ViewController.h */,
+				7483389E1AC9C0C300C3F5FD /* ViewController.m */,
+				748338A01AC9C0C300C3F5FD /* Images.xcassets */,
+				748338A21AC9C0C300C3F5FD /* Main.storyboard */,
+				748338961AC9C0C300C3F5FD /* Supporting Files */,
+			);
+			path = HubSync;
+			sourceTree = "<group>";
+		};
+		748338961AC9C0C300C3F5FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				748338971AC9C0C300C3F5FD /* Info.plist */,
+				7483389B1AC9C0C300C3F5FD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		748338AC1AC9C0C300C3F5FD /* HubSyncTests */ = {
+			isa = PBXGroup;
+			children = (
+				748338AF1AC9C0C300C3F5FD /* HubSyncTests.m */,
+				748338AD1AC9C0C300C3F5FD /* Supporting Files */,
+			);
+			path = HubSyncTests;
+			sourceTree = "<group>";
+		};
+		748338AD1AC9C0C300C3F5FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				748338AE1AC9C0C300C3F5FD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		748338B91AC9C14000C3F5FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				748338D31AC9C4AA00C3F5FD /* Realm.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		748338BC1AC9C19C00C3F5FD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				748338BD1AC9C19C00C3F5FD /* CSChatMessageRealmModel.h */,
+				748338BE1AC9C19C00C3F5FD /* CSChatMessageRealmModel.m */,
+				748338BF1AC9C19C00C3F5FD /* CSComment.h */,
+				748338C01AC9C19C00C3F5FD /* CSComment.m */,
+				748338C11AC9C19C00C3F5FD /* CSCommentRealmModel.h */,
+				748338C21AC9C19C00C3F5FD /* CSCommentRealmModel.m */,
+				748338C31AC9C19C00C3F5FD /* CSPeerHistoryRealmModel.h */,
+				748338C41AC9C19C00C3F5FD /* CSPeerHistoryRealmModel.m */,
+				748338C51AC9C19C00C3F5FD /* CSTaskRealmModel.h */,
+				748338C61AC9C19C00C3F5FD /* CSTaskRealmModel.m */,
+				748338C71AC9C19C00C3F5FD /* CSTaskTransientObjectStore.h */,
+				748338C81AC9C19C00C3F5FD /* CSTaskTransientObjectStore.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		748338921AC9C0C300C3F5FD /* HubSync */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 748338B31AC9C0C300C3F5FD /* Build configuration list for PBXNativeTarget "HubSync" */;
+			buildPhases = (
+				7483388F1AC9C0C300C3F5FD /* Sources */,
+				748338901AC9C0C300C3F5FD /* Frameworks */,
+				748338911AC9C0C300C3F5FD /* Resources */,
+				748338D51AC9C4CD00C3F5FD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HubSync;
+			productName = HubSync;
+			productReference = 748338931AC9C0C300C3F5FD /* HubSync.app */;
+			productType = "com.apple.product-type.application";
+		};
+		748338A81AC9C0C300C3F5FD /* HubSyncTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 748338B61AC9C0C300C3F5FD /* Build configuration list for PBXNativeTarget "HubSyncTests" */;
+			buildPhases = (
+				748338A51AC9C0C300C3F5FD /* Sources */,
+				748338A61AC9C0C300C3F5FD /* Frameworks */,
+				748338A71AC9C0C300C3F5FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				748338AB1AC9C0C300C3F5FD /* PBXTargetDependency */,
+			);
+			name = HubSyncTests;
+			productName = HubSyncTests;
+			productReference = 748338A91AC9C0C300C3F5FD /* HubSyncTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7483388B1AC9C0C300C3F5FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = AppsByDLI;
+				TargetAttributes = {
+					748338921AC9C0C300C3F5FD = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					748338A81AC9C0C300C3F5FD = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 748338921AC9C0C300C3F5FD;
+					};
+				};
+			};
+			buildConfigurationList = 7483388E1AC9C0C300C3F5FD /* Build configuration list for PBXProject "HubSync" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7483388A1AC9C0C300C3F5FD;
+			productRefGroup = 748338941AC9C0C300C3F5FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				748338921AC9C0C300C3F5FD /* HubSync */,
+				748338A81AC9C0C300C3F5FD /* HubSyncTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		748338911AC9C0C300C3F5FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				748338A11AC9C0C300C3F5FD /* Images.xcassets in Resources */,
+				748338A41AC9C0C300C3F5FD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		748338A71AC9C0C300C3F5FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7483388F1AC9C0C300C3F5FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				748338CD1AC9C19C00C3F5FD /* CSTaskRealmModel.m in Sources */,
+				748338CA1AC9C19C00C3F5FD /* CSComment.m in Sources */,
+				7483389F1AC9C0C300C3F5FD /* ViewController.m in Sources */,
+				748338C91AC9C19C00C3F5FD /* CSChatMessageRealmModel.m in Sources */,
+				7483389C1AC9C0C300C3F5FD /* main.m in Sources */,
+				748338CE1AC9C19C00C3F5FD /* CSTaskTransientObjectStore.m in Sources */,
+				7483389A1AC9C0C300C3F5FD /* AppDelegate.m in Sources */,
+				748338CB1AC9C19C00C3F5FD /* CSCommentRealmModel.m in Sources */,
+				748338CC1AC9C19C00C3F5FD /* CSPeerHistoryRealmModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		748338A51AC9C0C300C3F5FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				748338B01AC9C0C300C3F5FD /* HubSyncTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		748338AB1AC9C0C300C3F5FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 748338921AC9C0C300C3F5FD /* HubSync */;
+			targetProxy = 748338AA1AC9C0C300C3F5FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		748338A21AC9C0C300C3F5FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				748338A31AC9C0C300C3F5FD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		748338B11AC9C0C300C3F5FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		748338B21AC9C0C300C3F5FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		748338B41AC9C0C300C3F5FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HubSync/ThirdParty",
+				);
+				INFOPLIST_FILE = HubSync/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		748338B51AC9C0C300C3F5FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HubSync/ThirdParty",
+				);
+				INFOPLIST_FILE = HubSync/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		748338B71AC9C0C300C3F5FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HubSyncTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HubSync.app/Contents/MacOS/HubSync";
+			};
+			name = Debug;
+		};
+		748338B81AC9C0C300C3F5FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HubSyncTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HubSync.app/Contents/MacOS/HubSync";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7483388E1AC9C0C300C3F5FD /* Build configuration list for PBXProject "HubSync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				748338B11AC9C0C300C3F5FD /* Debug */,
+				748338B21AC9C0C300C3F5FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		748338B31AC9C0C300C3F5FD /* Build configuration list for PBXNativeTarget "HubSync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				748338B41AC9C0C300C3F5FD /* Debug */,
+				748338B51AC9C0C300C3F5FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		748338B61AC9C0C300C3F5FD /* Build configuration list for PBXNativeTarget "HubSyncTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				748338B71AC9C0C300C3F5FD /* Debug */,
+				748338B81AC9C0C300C3F5FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7483388B1AC9C0C300C3F5FD /* Project object */;
+}
