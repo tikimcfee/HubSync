@@ -25,6 +25,8 @@
 		748338DE1AC9C61900C3F5FD /* CSRealmWriteOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338D91AC9C61900C3F5FD /* CSRealmWriteOperation.m */; };
 		748338DF1AC9C61900C3F5FD /* CSSessionDataAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338DB1AC9C61900C3F5FD /* CSSessionDataAnalyzer.m */; };
 		748338E01AC9C61900C3F5FD /* CSSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338DD1AC9C61900C3F5FD /* CSSessionManager.m */; };
+		748338E31AC9CE1C00C3F5FD /* HSTaskDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338E21AC9CE1C00C3F5FD /* HSTaskDetailViewController.m */; };
+		748338E81AC9D5F900C3F5FD /* MainDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 748338E71AC9D5F900C3F5FD /* MainDetailView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,9 @@
 		748338DB1AC9C61900C3F5FD /* CSSessionDataAnalyzer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSessionDataAnalyzer.m; sourceTree = "<group>"; };
 		748338DC1AC9C61900C3F5FD /* CSSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSessionManager.h; sourceTree = "<group>"; };
 		748338DD1AC9C61900C3F5FD /* CSSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSessionManager.m; sourceTree = "<group>"; };
+		748338E11AC9CE1C00C3F5FD /* HSTaskDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSTaskDetailViewController.h; path = Controllers/HSTaskDetailViewController.h; sourceTree = "<group>"; };
+		748338E21AC9CE1C00C3F5FD /* HSTaskDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSTaskDetailViewController.m; path = Controllers/HSTaskDetailViewController.m; sourceTree = "<group>"; };
+		748338E71AC9D5F900C3F5FD /* MainDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainDetailView.xib; path = CustomViews/MainDetailView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,14 +132,13 @@
 		748338951AC9C0C300C3F5FD /* HubSync */ = {
 			isa = PBXGroup;
 			children = (
+				748338A01AC9C0C300C3F5FD /* Images.xcassets */,
 				748338B91AC9C14000C3F5FD /* Frameworks */,
 				748338BC1AC9C19C00C3F5FD /* Models */,
 				748338D71AC9C61900C3F5FD /* Session Management */,
-				748338981AC9C0C300C3F5FD /* AppDelegate.h */,
-				748338991AC9C0C300C3F5FD /* AppDelegate.m */,
+				748338E41AC9CE2000C3F5FD /* Controllers */,
 				7483389D1AC9C0C300C3F5FD /* ViewController.h */,
 				7483389E1AC9C0C300C3F5FD /* ViewController.m */,
-				748338A01AC9C0C300C3F5FD /* Images.xcassets */,
 				748338A21AC9C0C300C3F5FD /* Main.storyboard */,
 				748338961AC9C0C300C3F5FD /* Supporting Files */,
 			);
@@ -144,6 +148,8 @@
 		748338961AC9C0C300C3F5FD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				748338981AC9C0C300C3F5FD /* AppDelegate.h */,
+				748338991AC9C0C300C3F5FD /* AppDelegate.m */,
 				748338971AC9C0C300C3F5FD /* Info.plist */,
 				7483389B1AC9C0C300C3F5FD /* main.m */,
 			);
@@ -205,6 +211,24 @@
 				748338DD1AC9C61900C3F5FD /* CSSessionManager.m */,
 			);
 			path = "Session Management";
+			sourceTree = "<group>";
+		};
+		748338E41AC9CE2000C3F5FD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				748338E91AC9D62B00C3F5FD /* Details */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		748338E91AC9D62B00C3F5FD /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				748338E71AC9D5F900C3F5FD /* MainDetailView.xib */,
+				748338E11AC9CE1C00C3F5FD /* HSTaskDetailViewController.h */,
+				748338E21AC9CE1C00C3F5FD /* HSTaskDetailViewController.m */,
+			);
+			name = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				748338E81AC9D5F900C3F5FD /* MainDetailView.xib in Resources */,
 				748338A11AC9C0C300C3F5FD /* Images.xcassets in Resources */,
 				748338A41AC9C0C300C3F5FD /* Main.storyboard in Resources */,
 			);
@@ -312,6 +337,7 @@
 				748338DF1AC9C61900C3F5FD /* CSSessionDataAnalyzer.m in Sources */,
 				7483389F1AC9C0C300C3F5FD /* ViewController.m in Sources */,
 				748338C91AC9C19C00C3F5FD /* CSChatMessageRealmModel.m in Sources */,
+				748338E31AC9CE1C00C3F5FD /* HSTaskDetailViewController.m in Sources */,
 				7483389C1AC9C0C300C3F5FD /* main.m in Sources */,
 				748338E01AC9C61900C3F5FD /* CSSessionManager.m in Sources */,
 				748338CE1AC9C19C00C3F5FD /* CSTaskTransientObjectStore.m in Sources */,

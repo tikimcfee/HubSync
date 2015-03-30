@@ -14,6 +14,13 @@
     [super viewDidLoad];
 
     // Do any additional setup after loading the view.
+//    _taskDetailController = [[HSTaskDetailViewController alloc]
+//                             initWithNibName:@"HSTaskDetailViewController"
+//                             bundle:[NSBundle mainBundle]];
+    
+    
+//    [_mainContainerView addSubview: _taskDetailController.view];
+//    [_taskDetailController.view setNeedsLayout:YES];
 }
 
 - (void)setRepresentedObject:(id)representedObject {

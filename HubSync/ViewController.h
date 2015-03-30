@@ -7,8 +7,20 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "HSTaskDetailViewController.h"
 
 @interface ViewController : NSViewController
+
+@property (strong) IBOutlet NSTabView *mainTabView;
+@property (strong) IBOutlet NSView *mainContainerView;
+
+@property (strong) IBOutlet NSView *tasksView;
+@property (strong) IBOutlet NSScrollView *taskList;
+
+@property (strong) IBOutlet NSView *usersView;
+
+@property (strong, nonatomic) HSTaskDetailViewController* taskDetailViewController;
+
 
 
 @end
