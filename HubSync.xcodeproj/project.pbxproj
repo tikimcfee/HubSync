@@ -27,6 +27,8 @@
 		748338E01AC9C61900C3F5FD /* CSSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338DD1AC9C61900C3F5FD /* CSSessionManager.m */; };
 		748338E31AC9CE1C00C3F5FD /* HSTaskDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338E21AC9CE1C00C3F5FD /* HSTaskDetailViewController.m */; };
 		748338E81AC9D5F900C3F5FD /* MainDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 748338E71AC9D5F900C3F5FD /* MainDetailView.xib */; };
+		748338F11AC9E0C500C3F5FD /* HSTaskListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338F01AC9E0C500C3F5FD /* HSTaskListViewController.m */; };
+		748338F51AC9E85300C3F5FD /* HSTaskListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338F41AC9E85300C3F5FD /* HSTaskListCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,10 @@
 		748338E11AC9CE1C00C3F5FD /* HSTaskDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSTaskDetailViewController.h; path = Controllers/HSTaskDetailViewController.h; sourceTree = "<group>"; };
 		748338E21AC9CE1C00C3F5FD /* HSTaskDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSTaskDetailViewController.m; path = Controllers/HSTaskDetailViewController.m; sourceTree = "<group>"; };
 		748338E71AC9D5F900C3F5FD /* MainDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainDetailView.xib; path = CustomViews/MainDetailView.xib; sourceTree = "<group>"; };
+		748338EF1AC9E0C500C3F5FD /* HSTaskListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSTaskListViewController.h; path = Controllers/HSTaskListViewController.h; sourceTree = "<group>"; };
+		748338F01AC9E0C500C3F5FD /* HSTaskListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSTaskListViewController.m; path = Controllers/HSTaskListViewController.m; sourceTree = "<group>"; };
+		748338F31AC9E85300C3F5FD /* HSTaskListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSTaskListCell.h; path = Controllers/HSTaskListCell.h; sourceTree = "<group>"; };
+		748338F41AC9E85300C3F5FD /* HSTaskListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSTaskListCell.m; path = Controllers/HSTaskListCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				748338E91AC9D62B00C3F5FD /* Details */,
+				748338F21AC9E83500C3F5FD /* Task List */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -229,6 +236,17 @@
 				748338E21AC9CE1C00C3F5FD /* HSTaskDetailViewController.m */,
 			);
 			name = Details;
+			sourceTree = "<group>";
+		};
+		748338F21AC9E83500C3F5FD /* Task List */ = {
+			isa = PBXGroup;
+			children = (
+				748338EF1AC9E0C500C3F5FD /* HSTaskListViewController.h */,
+				748338F01AC9E0C500C3F5FD /* HSTaskListViewController.m */,
+				748338F31AC9E85300C3F5FD /* HSTaskListCell.h */,
+				748338F41AC9E85300C3F5FD /* HSTaskListCell.m */,
+			);
+			name = "Task List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,12 +350,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				748338F51AC9E85300C3F5FD /* HSTaskListCell.m in Sources */,
 				748338CD1AC9C19C00C3F5FD /* CSTaskRealmModel.m in Sources */,
 				748338CA1AC9C19C00C3F5FD /* CSComment.m in Sources */,
 				748338DF1AC9C61900C3F5FD /* CSSessionDataAnalyzer.m in Sources */,
 				7483389F1AC9C0C300C3F5FD /* ViewController.m in Sources */,
 				748338C91AC9C19C00C3F5FD /* CSChatMessageRealmModel.m in Sources */,
 				748338E31AC9CE1C00C3F5FD /* HSTaskDetailViewController.m in Sources */,
+				748338F11AC9E0C500C3F5FD /* HSTaskListViewController.m in Sources */,
 				7483389C1AC9C0C300C3F5FD /* main.m in Sources */,
 				748338E01AC9C61900C3F5FD /* CSSessionManager.m in Sources */,
 				748338CE1AC9C19C00C3F5FD /* CSTaskTransientObjectStore.m in Sources */,
