@@ -7,9 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "CSSessionManager.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
+# pragma mark - Application-wide sessions manager
+@property (strong, nonatomic) CSSessionManager* globalSessionManager;
+@property (strong, nonatomic) NSString* userDisplayName;
 
 @end
 

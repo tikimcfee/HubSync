@@ -22,6 +22,9 @@
 		748338D21AC9C3B400C3F5FD /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 748338D11AC9C3B300C3F5FD /* libc++.dylib */; };
 		748338D41AC9C4AA00C3F5FD /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748338D31AC9C4AA00C3F5FD /* Realm.framework */; };
 		748338D61AC9C4D800C3F5FD /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 748338D31AC9C4AA00C3F5FD /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		748338DE1AC9C61900C3F5FD /* CSRealmWriteOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338D91AC9C61900C3F5FD /* CSRealmWriteOperation.m */; };
+		748338DF1AC9C61900C3F5FD /* CSSessionDataAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338DB1AC9C61900C3F5FD /* CSSessionDataAnalyzer.m */; };
+		748338E01AC9C61900C3F5FD /* CSSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338DD1AC9C61900C3F5FD /* CSSessionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,12 @@
 		748338C81AC9C19C00C3F5FD /* CSTaskTransientObjectStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTaskTransientObjectStore.m; sourceTree = "<group>"; };
 		748338D11AC9C3B300C3F5FD /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		748338D31AC9C4AA00C3F5FD /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = ThirdParty/Realm.framework; sourceTree = "<group>"; };
+		748338D81AC9C61900C3F5FD /* CSRealmWriteOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSRealmWriteOperation.h; sourceTree = "<group>"; };
+		748338D91AC9C61900C3F5FD /* CSRealmWriteOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSRealmWriteOperation.m; sourceTree = "<group>"; };
+		748338DA1AC9C61900C3F5FD /* CSSessionDataAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSessionDataAnalyzer.h; sourceTree = "<group>"; };
+		748338DB1AC9C61900C3F5FD /* CSSessionDataAnalyzer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSessionDataAnalyzer.m; sourceTree = "<group>"; };
+		748338DC1AC9C61900C3F5FD /* CSSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSessionManager.h; sourceTree = "<group>"; };
+		748338DD1AC9C61900C3F5FD /* CSSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSessionManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +128,9 @@
 			isa = PBXGroup;
 			children = (
 				748338B91AC9C14000C3F5FD /* Frameworks */,
-				748338981AC9C0C300C3F5FD /* AppDelegate.h */,
 				748338BC1AC9C19C00C3F5FD /* Models */,
+				748338D71AC9C61900C3F5FD /* Session Management */,
+				748338981AC9C0C300C3F5FD /* AppDelegate.h */,
 				748338991AC9C0C300C3F5FD /* AppDelegate.m */,
 				7483389D1AC9C0C300C3F5FD /* ViewController.h */,
 				7483389E1AC9C0C300C3F5FD /* ViewController.m */,
@@ -182,6 +192,19 @@
 				748338C81AC9C19C00C3F5FD /* CSTaskTransientObjectStore.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		748338D71AC9C61900C3F5FD /* Session Management */ = {
+			isa = PBXGroup;
+			children = (
+				748338D81AC9C61900C3F5FD /* CSRealmWriteOperation.h */,
+				748338D91AC9C61900C3F5FD /* CSRealmWriteOperation.m */,
+				748338DA1AC9C61900C3F5FD /* CSSessionDataAnalyzer.h */,
+				748338DB1AC9C61900C3F5FD /* CSSessionDataAnalyzer.m */,
+				748338DC1AC9C61900C3F5FD /* CSSessionManager.h */,
+				748338DD1AC9C61900C3F5FD /* CSSessionManager.m */,
+			);
+			path = "Session Management";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,13 +309,16 @@
 			files = (
 				748338CD1AC9C19C00C3F5FD /* CSTaskRealmModel.m in Sources */,
 				748338CA1AC9C19C00C3F5FD /* CSComment.m in Sources */,
+				748338DF1AC9C61900C3F5FD /* CSSessionDataAnalyzer.m in Sources */,
 				7483389F1AC9C0C300C3F5FD /* ViewController.m in Sources */,
 				748338C91AC9C19C00C3F5FD /* CSChatMessageRealmModel.m in Sources */,
 				7483389C1AC9C0C300C3F5FD /* main.m in Sources */,
+				748338E01AC9C61900C3F5FD /* CSSessionManager.m in Sources */,
 				748338CE1AC9C19C00C3F5FD /* CSTaskTransientObjectStore.m in Sources */,
 				7483389A1AC9C0C300C3F5FD /* AppDelegate.m in Sources */,
 				748338CB1AC9C19C00C3F5FD /* CSCommentRealmModel.m in Sources */,
 				748338CC1AC9C19C00C3F5FD /* CSPeerHistoryRealmModel.m in Sources */,
+				748338DE1AC9C61900C3F5FD /* CSRealmWriteOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

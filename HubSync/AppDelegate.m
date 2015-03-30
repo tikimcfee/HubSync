@@ -16,6 +16,9 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    
+    _userDisplayName = NSUserName();
+    _globalSessionManager = [[CSSessionManager alloc] initWithID:_userDisplayName];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
