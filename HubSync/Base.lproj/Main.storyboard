@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C1510" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
     </dependencies>
@@ -673,19 +673,25 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <containerView translatesAutoresizingMaskIntoConstraints="NO" id="Uxz-nj-rlT">
-                                <rect key="frame" x="453" y="20" width="424" height="529"/>
+                                <rect key="frame" x="453" y="20" width="425" height="530"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="400" id="c4c-kG-f12"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="nBw-CD-mrr" kind="embed" identifier="HotSwap" id="pyq-ci-Rub"/>
+                                </connections>
                             </containerView>
                             <tabView translatesAutoresizingMaskIntoConstraints="NO" id="c4u-P8-FKw">
-                                <rect key="frame" x="13" y="10" width="439" height="553"/>
+                                <rect key="frame" x="13" y="10" width="439" height="554"/>
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="Tasks" identifier="1" id="KFe-ww-2jO">
                                         <view key="view" id="sec-h2-9ac">
-                                            <rect key="frame" x="10" y="33" width="418" height="507"/>
+                                            <rect key="frame" x="10" y="33" width="419" height="508"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <containerView translatesAutoresizingMaskIntoConstraints="NO" id="Sns-gX-P6w">
-                                                    <rect key="frame" x="0.0" y="0.0" width="419" height="507"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="419" height="508"/>
                                                     <connections>
                                                         <segue destination="ZhE-Ng-3MO" kind="embed" id="a6f-cd-YPA"/>
                                                     </connections>
@@ -729,7 +735,7 @@
                             <constraint firstItem="Uxz-nj-rlT" firstAttribute="leading" secondItem="c4u-P8-FKw" secondAttribute="trailing" constant="8" id="NPj-pI-GZj"/>
                             <constraint firstItem="Uxz-nj-rlT" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="TLf-5G-fQF"/>
                             <constraint firstItem="c4u-P8-FKw" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="gSA-La-Hz1"/>
-                            <constraint firstItem="c4u-P8-FKw" firstAttribute="width" secondItem="Uxz-nj-rlT" secondAttribute="width" id="hiN-59-idH"/>
+                            <constraint firstItem="c4u-P8-FKw" firstAttribute="width" secondItem="Uxz-nj-rlT" secondAttribute="width" priority="750" id="hiN-59-idH"/>
                             <constraint firstAttribute="bottom" secondItem="c4u-P8-FKw" secondAttribute="bottom" constant="20" id="j8f-vi-QDn"/>
                         </constraints>
                     </view>
@@ -742,26 +748,43 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.5" y="828.5"/>
+            <point key="canvasLocation" x="53" y="828"/>
+        </scene>
+        <!--Hot Swap View Controller-->
+        <scene sceneID="ofc-Yr-R9o">
+            <objects>
+                <viewController id="nBw-CD-mrr" customClass="HSHotSwapViewController" sceneMemberID="viewController">
+                    <view key="view" canDrawConcurrently="YES" id="w4h-bn-KKd">
+                        <rect key="frame" x="0.0" y="0.0" width="425" height="530"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                    <connections>
+                        <segue destination="IRg-bU-wql" kind="custom" identifier="embedFirst" customClass="EmptySegue" id="eI9-Yx-Ajr"/>
+                        <segue destination="1g8-h7-Pez" kind="custom" identifier="embedSecond" customClass="EmptySegue" id="WwQ-Di-Bs4"/>
+                    </connections>
+                </viewController>
+                <customObject id="tvv-pm-8gq" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="819.5" y="828"/>
         </scene>
         <!--HSTaskDetailViewController-->
         <scene sceneID="B18-PO-VnL">
             <objects>
                 <viewController title="HSTaskDetailViewController" storyboardIdentifier="HSTaskDetailViewController" id="IRg-bU-wql" customClass="HSTaskDetailViewController" sceneMemberID="viewController">
-                    <view key="view" id="3rB-Bo-TBW">
-                        <rect key="frame" x="0.0" y="0.0" width="426" height="492"/>
+                    <view key="view" placeholderIntrinsicWidth="426" placeholderIntrinsicHeight="492" id="3rB-Bo-TBW">
+                        <rect key="frame" x="0.0" y="0.0" width="425" height="530"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kRQ-ds-TEj">
-                                <rect key="frame" x="18" y="455" width="95" height="22"/>
+                                <rect key="frame" x="18" y="493" width="95" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Task Name" id="9UM-RL-dS2">
                                     <font key="font" metaFont="system" size="18"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="R2n-v9-27k">
-                                <rect key="frame" x="20" y="330" width="386" height="117"/>
+                            <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R2n-v9-27k">
+                                <rect key="frame" x="20" y="368" width="386" height="117"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="117" id="Jnf-9o-iMm"/>
                                 </constraints>
@@ -773,11 +796,12 @@
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="R2n-v9-27k" secondAttribute="trailing" constant="20" id="9OD-SG-Z2N"/>
-                            <constraint firstItem="R2n-v9-27k" firstAttribute="leading" secondItem="3rB-Bo-TBW" secondAttribute="leading" constant="20" id="XJt-4h-CKT"/>
+                            <constraint firstItem="R2n-v9-27k" firstAttribute="leading" secondItem="3rB-Bo-TBW" secondAttribute="leading" constant="20" id="J8d-Mr-65C"/>
+                            <constraint firstAttribute="trailing" secondItem="R2n-v9-27k" secondAttribute="trailing" constant="20" id="aPx-KV-nX9"/>
                             <constraint firstItem="R2n-v9-27k" firstAttribute="top" secondItem="kRQ-ds-TEj" secondAttribute="bottom" constant="8" id="amy-Xm-vNb"/>
                             <constraint firstItem="kRQ-ds-TEj" firstAttribute="top" secondItem="3rB-Bo-TBW" secondAttribute="top" constant="15" id="fIZ-5m-UhQ"/>
                             <constraint firstItem="kRQ-ds-TEj" firstAttribute="leading" secondItem="3rB-Bo-TBW" secondAttribute="leading" constant="20" id="shk-om-efR"/>
+                            <constraint firstAttribute="centerX" secondItem="R2n-v9-27k" secondAttribute="centerX" id="zK5-fz-4CL"/>
                         </constraints>
                     </view>
                     <connections>
@@ -787,7 +811,34 @@
                 </viewController>
                 <customObject id="l3k-KQ-gon" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="808" y="681"/>
+            <point key="canvasLocation" x="599.5" y="1500"/>
+        </scene>
+        <!--Task Detail View Controller-->
+        <scene sceneID="84K-ka-uNZ">
+            <objects>
+                <viewController id="1g8-h7-Pez" customClass="HSTaskDetailViewController" sceneMemberID="viewController">
+                    <view key="view" id="4Sc-BR-GYU">
+                        <rect key="frame" x="0.0" y="0.0" width="425" height="530"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ok7-ag-BBf">
+                                <rect key="frame" x="157" y="493" width="136" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Username Goes Here" id="8zz-Da-XCF">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Ok7-ag-BBf" firstAttribute="top" secondItem="4Sc-BR-GYU" secondAttribute="top" constant="20" id="1um-Fm-JiV"/>
+                            <constraint firstAttribute="centerX" secondItem="Ok7-ag-BBf" secondAttribute="centerX" id="YJh-0V-Gt6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="S6x-oR-NT2" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1045.5" y="1500"/>
         </scene>
         <!--Task List View Controller-->
         <scene sceneID="Dgx-0v-YFz">
@@ -865,7 +916,7 @@
                                     </subviews>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="0.5" horizontal="YES" id="Yhj-Q8-wMw">
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="Yhj-Q8-wMw">
                                     <rect key="frame" x="1" y="119" width="223" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -887,7 +938,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-731" y="755.5"/>
+            <point key="canvasLocation" x="-747" y="835.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6jR-y9-GZ7">
@@ -978,7 +1029,7 @@
                                     </subviews>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
-                                <scroller key="horizontalScroller" verticalHuggingPriority="750" doubleValue="0.33333333333333331" horizontal="YES" id="ZX6-QS-42y">
+                                <scroller key="horizontalScroller" verticalHuggingPriority="750" doubleValue="0.32106333703641848" horizontal="YES" id="ZX6-QS-42y">
                                     <rect key="frame" x="1" y="109.66529780626297" width="220" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -1002,7 +1053,7 @@
                 </viewController>
                 <customObject id="tsm-57-McD" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-713" y="1299.5"/>
+            <point key="canvasLocation" x="-781" y="1399.5"/>
         </scene>
     </scenes>
 </document>

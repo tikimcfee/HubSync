@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		458A55D21ACACF5400F73E54 /* HSHotSwapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 458A55D11ACACF5400F73E54 /* HSHotSwapViewController.m */; };
 		7483389A1AC9C0C300C3F5FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338991AC9C0C300C3F5FD /* AppDelegate.m */; };
 		7483389C1AC9C0C300C3F5FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7483389B1AC9C0C300C3F5FD /* main.m */; };
 		7483389F1AC9C0C300C3F5FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7483389E1AC9C0C300C3F5FD /* ViewController.m */; };
@@ -55,6 +56,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		458A55D01ACACF5400F73E54 /* HSHotSwapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSHotSwapViewController.h; path = Controllers/HSHotSwapViewController.h; sourceTree = "<group>"; };
+		458A55D11ACACF5400F73E54 /* HSHotSwapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSHotSwapViewController.m; path = Controllers/HSHotSwapViewController.m; sourceTree = "<group>"; };
 		748338931AC9C0C300C3F5FD /* HubSync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HubSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		748338971AC9C0C300C3F5FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		748338981AC9C0C300C3F5FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -224,6 +227,8 @@
 			children = (
 				748338E91AC9D62B00C3F5FD /* Details */,
 				748338F21AC9E83500C3F5FD /* Task List */,
+				458A55D01ACACF5400F73E54 /* HSHotSwapViewController.h */,
+				458A55D11ACACF5400F73E54 /* HSHotSwapViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -354,6 +359,7 @@
 				748338CD1AC9C19C00C3F5FD /* CSTaskRealmModel.m in Sources */,
 				748338CA1AC9C19C00C3F5FD /* CSComment.m in Sources */,
 				748338DF1AC9C61900C3F5FD /* CSSessionDataAnalyzer.m in Sources */,
+				458A55D21ACACF5400F73E54 /* HSHotSwapViewController.m in Sources */,
 				7483389F1AC9C0C300C3F5FD /* ViewController.m in Sources */,
 				748338C91AC9C19C00C3F5FD /* CSChatMessageRealmModel.m in Sources */,
 				748338E31AC9CE1C00C3F5FD /* HSTaskDetailViewController.m in Sources */,
@@ -559,6 +565,7 @@
 				748338B51AC9C0C300C3F5FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		748338B61AC9C0C300C3F5FD /* Build configuration list for PBXNativeTarget "HubSyncTests" */ = {
 			isa = XCConfigurationList;
@@ -567,6 +574,7 @@
 				748338B81AC9C0C300C3F5FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

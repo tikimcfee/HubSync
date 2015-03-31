@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "HSTaskDetailViewController.h"
+#import "HSHotSwapViewController.h"
 
 @interface ViewController : NSViewController
 
@@ -20,6 +21,8 @@
 @property (strong) IBOutlet NSView *usersView;
 
 @property (strong, nonatomic) HSTaskDetailViewController* taskDetailViewController;
+
+@property (strong, nonatomic) HSHotSwapViewController* hotSwapViewController;
 
 
 
