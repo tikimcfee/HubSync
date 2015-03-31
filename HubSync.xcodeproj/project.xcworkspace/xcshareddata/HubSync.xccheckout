@@ -11,9 +11,7 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>9B9D1A6FD37DD4CE231D55E0531F9FD3AD97E41B</key>
-		<string>https://github.com/tikimcfee/HubSync.git</string>
-		<key>C22B2C1F4CAFDB0BF9633276305829759DB58351</key>
-		<string>https://github.com/tikimcfee/CommSync.git</string>
+		<string>github.com:tikimcfee/HubSync.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>HubSync.xcodeproj</string>
@@ -21,25 +19,15 @@
 	<dict>
 		<key>9B9D1A6FD37DD4CE231D55E0531F9FD3AD97E41B</key>
 		<string>../..</string>
-		<key>C22B2C1F4CAFDB0BF9633276305829759DB58351</key>
-		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/tikimcfee/HubSync.git</string>
+	<string>github.com:tikimcfee/HubSync.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
 	<string>9B9D1A6FD37DD4CE231D55E0531F9FD3AD97E41B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>C22B2C1F4CAFDB0BF9633276305829759DB58351</string>
-			<key>IDESourceControlWCCName</key>
-			<string></string>
-		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

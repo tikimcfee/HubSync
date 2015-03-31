@@ -14,7 +14,7 @@
 - (void) configureWithSourceTask:(CSTaskRealmModel*)sourceTask {
     _sourceTask = sourceTask;
     
-    _taskName.stringValue = @"Simple Task Name";
+    _taskName.stringValue = sourceTask.taskTitle;
     
     [_priorityColorView setWantsLayer:YES];
     _priorityColorView.layer.backgroundColor = [NSColor redColor].CGColor;
