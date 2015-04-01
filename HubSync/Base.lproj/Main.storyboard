@@ -846,6 +846,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="taskAudioPlayButton" destination="ZTc-ne-i89" id="dKO-gG-GlS"/>
                         <outlet property="taskDescriptionTextView" destination="CbZ-Lb-r0a" id="pQ7-kd-QnZ"/>
                         <outlet property="taskNameLabel" destination="kRQ-ds-TEj" id="dmh-fJ-y0w"/>
                         <outlet property="taskPriorityBubble" destination="cBl-Xi-SnU" id="qnU-rX-WjN"/>

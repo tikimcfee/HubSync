@@ -14,6 +14,7 @@
 @property (strong) IBOutlet NSTextField *taskNameLabel;
 @property (strong) IBOutlet NSTextView *taskDescriptionTextView;
 
+@property (strong) IBOutlet NSButton *taskAudioPlayButton;
 
 @property (strong) IBOutlet NSView *taskPriorityBubble;
 
