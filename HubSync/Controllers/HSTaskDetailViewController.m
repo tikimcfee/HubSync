@@ -91,14 +91,19 @@
         _taskPriorityBubble.layer.cornerRadius = _taskPriorityBubble.bounds.size.width / 2;
         _taskPriorityBubble.layer.backgroundColor = priority;
         
-        id someObject = [NSUnarchiver unarchiveObjectWithData:_sourceTask.taskAudio];
-        if([someObject isKindOfClass:[[NSNull null] class]]) {
-            NSLog(@"NULL AUDIO");
+        bool hasAudio = NO;
+        @try {
+            [NSKeyedUnarchiver unarchiveObjectWithData:_sourceTask.taskAudio];
         }
-        if (_sourceTask.taskAudio == nil) {
-            _taskAudioPlayButton.enabled = NO;
-        } else {
+        @catch (NSException *exception) {
+            NSLog(@"HAS AUDIO");
+            hasAudio = YES;
+        }
+        
+        if (hasAudio) {
             _taskAudioPlayButton.enabled = YES;
+        } else {
+            _taskAudioPlayButton.enabled = NO;
         }
     }
 }
