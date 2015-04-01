@@ -11,12 +11,10 @@
 #import "CSTaskTransientObjectStore.h"
 #import "CSTaskRealmModel.h"
 #import "CSRealmWriteOperation.h"
+#import "HSConstantsHeader.h"
 
 // Critical constants for building data transmission strings
 #define kCSDefaultStringEncodingMethod NSUTF16StringEncoding
-#define kCS_HEADER_NEW_TASK     @"NEW_TASK"
-#define kCS_HEADER_TASK_REQUEST @"TASK_REQUEST"
-#define kCS_STRING_SEPERATOR    @":"
 
 // Implementation of task information container
 @implementation CSNewTaskResourceInformationContainer

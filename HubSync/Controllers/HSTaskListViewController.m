@@ -10,6 +10,7 @@
 #import "HSTaskListCell.h"
 #import "AppDelegate.h"
 #import "CSTaskRealmModel.h"
+#import "HSConstantsHeader.h"
 
 
 @interface HSTaskListViewController ()
@@ -33,7 +34,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(didReceiveNewTask:)
-                                                 name:@"kCSDidFinishReceivingResourceWithName"
+                                                 name:kCSDidFinishReceivingResourceWithName
                                                object:nil];
 }
 
@@ -62,7 +63,7 @@
     
     HSTaskListCell *cell = [self.taskList viewAtColumn:self.taskList.selectedColumn row:self.taskList.selectedRow makeIfNecessary:NO];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"kSelectedRowNotification" object:cell];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kHSSelectedRowNotification object:cell];
 }
 
 #pragma mark - Data Source

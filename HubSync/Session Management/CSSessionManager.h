@@ -15,11 +15,6 @@
 #define PULSE_BACK_STRING @"|~PULSE-BACK~|"
 #define MANUAL_DISCONNECT_STRING @"|~DISCONNECT~|"
 
-// Notification names
-#define kCSDidStartReceivingResourceWithName @"kCSDidStartReceivingResourceWithName"
-#define kCSDidFinishReceivingResourceWithName @"kCSDidFinishReceivingResourceWithName"
-#define kCSReceivingProgressNotification @"kCSReceivingProgressNotification"
-
 @protocol MCSessionDataHandlingDelegate <NSObject>
 
 @required

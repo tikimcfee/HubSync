@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "HSTaskListCell.h"
+#import "HSConstantsHeader.h"
 
 @interface EmptySegue : NSStoryboardSegue
 
@@ -32,7 +33,7 @@
     // Do any additional setup after loading the vieww
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(newTaskDetailSelected:)
-                                                 name:@"kSelectedRowNotification"
+                                                 name:kHSSelectedRowNotification
                                                object:nil];
 }
 

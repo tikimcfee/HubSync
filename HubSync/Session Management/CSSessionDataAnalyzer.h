@@ -9,8 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "CSSessionManager.h"
 
-#define kCSNewTaskResourceInformationContainer @"resourceInformationContainer"
-
 @class RLMRealm;
 @interface CSSessionDataAnalyzer : NSObject <MCSessionDataHandlingDelegate>
 

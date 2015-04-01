@@ -97,6 +97,7 @@
 		748338F01AC9E0C500C3F5FD /* HSTaskListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSTaskListViewController.m; path = Controllers/HSTaskListViewController.m; sourceTree = "<group>"; };
 		748338F31AC9E85300C3F5FD /* HSTaskListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSTaskListCell.h; path = Controllers/HSTaskListCell.h; sourceTree = "<group>"; };
 		748338F41AC9E85300C3F5FD /* HSTaskListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSTaskListCell.m; path = Controllers/HSTaskListCell.m; sourceTree = "<group>"; };
+		74BE6F9F1ACC5D420048B1DC /* HSConstantsHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSConstantsHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +151,7 @@
 				7483389E1AC9C0C300C3F5FD /* ViewController.m */,
 				748338A21AC9C0C300C3F5FD /* Main.storyboard */,
 				748338961AC9C0C300C3F5FD /* Supporting Files */,
+				74BE6F9F1ACC5D420048B1DC /* HSConstantsHeader.h */,
 			);
 			path = HubSync;
 			sourceTree = "<group>";
