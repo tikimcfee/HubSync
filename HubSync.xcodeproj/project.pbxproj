@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F131BD91ACC876600DFFDBE /* HSUserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F131BD81ACC876600DFFDBE /* HSUserListViewController.m */; };
+		3F131BDC1ACC89BC00DFFDBE /* HSUserListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F131BDB1ACC89BC00DFFDBE /* HSUserListCell.m */; };
 		458A55D21ACACF5400F73E54 /* HSHotSwapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 458A55D11ACACF5400F73E54 /* HSHotSwapViewController.m */; };
 		7483389A1AC9C0C300C3F5FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338991AC9C0C300C3F5FD /* AppDelegate.m */; };
 		7483389C1AC9C0C300C3F5FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7483389B1AC9C0C300C3F5FD /* main.m */; };
@@ -76,6 +78,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3F131BD71ACC876600DFFDBE /* HSUserListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSUserListViewController.h; path = Controllers/HSUserListViewController.h; sourceTree = "<group>"; };
+		3F131BD81ACC876600DFFDBE /* HSUserListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSUserListViewController.m; path = Controllers/HSUserListViewController.m; sourceTree = "<group>"; };
+		3F131BDA1ACC89BC00DFFDBE /* HSUserListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSUserListCell.h; path = Controllers/HSUserListCell.h; sourceTree = "<group>"; };
+		3F131BDB1ACC89BC00DFFDBE /* HSUserListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSUserListCell.m; path = Controllers/HSUserListCell.m; sourceTree = "<group>"; };
 		458A55D01ACACF5400F73E54 /* HSHotSwapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSHotSwapViewController.h; path = Controllers/HSHotSwapViewController.h; sourceTree = "<group>"; };
 		458A55D11ACACF5400F73E54 /* HSHotSwapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSHotSwapViewController.m; path = Controllers/HSHotSwapViewController.m; sourceTree = "<group>"; };
 		748338931AC9C0C300C3F5FD /* HubSync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HubSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +185,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F131BD61ACC852500DFFDBE /* User List */ = {
+			isa = PBXGroup;
+			children = (
+				3F131BD71ACC876600DFFDBE /* HSUserListViewController.h */,
+				3F131BD81ACC876600DFFDBE /* HSUserListViewController.m */,
+				3F131BDA1ACC89BC00DFFDBE /* HSUserListCell.h */,
+				3F131BDB1ACC89BC00DFFDBE /* HSUserListCell.m */,
+			);
+			name = "User List";
+			sourceTree = "<group>";
+		};
 		7483388A1AC9C0C300C3F5FD = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +304,7 @@
 		748338E41AC9CE2000C3F5FD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3F131BD61ACC852500DFFDBE /* User List */,
 				74BE6FD71ACC77240048B1DC /* CSAudioPlotViewController.h */,
 				74BE6FD81ACC77240048B1DC /* CSAudioPlotViewController.m */,
 				748338E91AC9D62B00C3F5FD /* Details */,
@@ -506,6 +524,7 @@
 				7483389A1AC9C0C300C3F5FD /* AppDelegate.m in Sources */,
 				748338CB1AC9C19C00C3F5FD /* CSCommentRealmModel.m in Sources */,
 				74BE6FC61ACC73540048B1DC /* EZRecorder.m in Sources */,
+				3F131BD91ACC876600DFFDBE /* HSUserListViewController.m in Sources */,
 				74BE6FBF1ACC73540048B1DC /* EZAudioPlayer.m in Sources */,
 				748338CC1AC9C19C00C3F5FD /* CSPeerHistoryRealmModel.m in Sources */,
 				74BE6FC31ACC73540048B1DC /* EZMicrophone.m in Sources */,
@@ -514,6 +533,7 @@
 				74BE6FC41ACC73540048B1DC /* EZOutput.m in Sources */,
 				74BE6FC21ACC73540048B1DC /* EZAudioPlotGLKViewController.m in Sources */,
 				74BE6FD91ACC77240048B1DC /* CSAudioPlotViewController.m in Sources */,
+				3F131BDC1ACC89BC00DFFDBE /* HSUserListCell.m in Sources */,
 				74BE6FC51ACC73540048B1DC /* EZPlot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

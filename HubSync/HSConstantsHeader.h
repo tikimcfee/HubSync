@@ -12,7 +12,7 @@
 #endif
 
 // Selection Notifications
-static NSString *kHSSelectedRowNotification = @"kHSSelectedRowNotification";
+static NSString *kHSSelectedUserDetailNotification = @"kHSSelectedUserDetailNotification";
 static NSString *kHSSelectedTaskDetailRowNotification = @"kHSSelectedTaskDetailRowNotification";
 
 // Segue Identifiers

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6751"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -800,10 +800,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="223" height="148"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="383" height="148"/>
+                                            <size key="minSize" width="368" height="148"/>
                                             <size key="maxSize" width="463" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="383" height="148"/>
+                                            <size key="minSize" width="368" height="148"/>
                                             <size key="maxSize" width="463" height="10000000"/>
                                         </textView>
                                     </subviews>
@@ -1052,10 +1052,10 @@
             </objects>
             <point key="canvasLocation" x="-747" y="835.5"/>
         </scene>
-        <!--View Controller-->
+        <!--User List View Controller-->
         <scene sceneID="6jR-y9-GZ7">
             <objects>
-                <viewController id="qKM-wT-lxq" sceneMemberID="viewController">
+                <viewController id="qKM-wT-lxq" customClass="HSUserListViewController" sceneMemberID="viewController">
                     <view key="view" id="lT1-eL-jPi">
                         <rect key="frame" x="0.0" y="0.0" width="566" height="435"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1084,27 +1084,22 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView id="YZ0-51-RAN">
+                                                        <tableCellView identifier="UserCell" id="7tD-qH-RXO" customClass="HSUserListCell">
                                                             <rect key="frame" x="0.0" y="0.0" width="564" height="64"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n9I-gP-u5l">
-                                                                    <rect key="frame" x="192" y="34" width="38" height="17"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="Cgv-EU-Xjo">
-                                                                        <font key="font" metaFont="system"/>
-                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                                    </textFieldCell>
-                                                                </textField>
-                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ggD-jv-tIQ">
-                                                                    <rect key="frame" x="327" y="34" width="38" height="17"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="AUu-Tg-jie">
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zQF-h5-1eH">
+                                                                    <rect key="frame" x="15" y="24" width="535" height="17"/>
+                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="CaL-1e-L3W">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
                                                             </subviews>
+                                                            <connections>
+                                                                <outlet property="name" destination="zQF-h5-1eH" id="bdt-B6-Bt0"/>
+                                                            </connections>
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
@@ -1130,6 +1125,9 @@
                             <constraint firstAttribute="trailing" secondItem="l9l-k0-1dp" secondAttribute="trailing" id="kfF-KY-Dtr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="userList" destination="bXW-Qc-3nl" id="vxO-cS-pCu"/>
+                    </connections>
                 </viewController>
                 <customObject id="tsm-57-McD" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
