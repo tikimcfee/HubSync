@@ -6,12 +6,16 @@
 //  Copyright (c) 2015 AppsByDLI. All rights reserved.
 //
 
+#import <AVFoundation/AVFoundation.h>
 #import <Cocoa/Cocoa.h>
 
-@interface HSTaskDetailViewController : NSViewController
+@interface HSTaskDetailViewController : NSViewController <AVAudioPlayerDelegate>
 
 @property (strong) IBOutlet NSTextField *taskNameLabel;
-@property (strong) IBOutlet NSTextField *taskDescriptionTextField;
+@property (strong) IBOutlet NSTextView *taskDescriptionTextView;
+
+
+@property (strong) IBOutlet NSView *taskPriorityBubble;
 
 
 @end

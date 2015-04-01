@@ -27,6 +27,13 @@
 
 #import "EZAudio.h"
 
+/// Buses
+static const AudioUnitScope   kEZAudioMicrophoneOutputBus   = 0;
+
+/// Flags
+static const UInt32           kEZAudioMicrophoneEnableFlag  = 1;
+static const UInt32           kEZAudioMicrophoneDisableFlag = 0;
+
 @interface EZOutput (){
   BOOL                        _customASBD;
   BOOL                        _isPlaying;
@@ -61,8 +68,8 @@ static OSStatus OutputRenderCallback(void                        *inRefCon,
     
     TPCircularBuffer *circularBuffer = [output.outputDataSource outputShouldUseCircularBuffer:output];
     if( !circularBuffer ){
-      float *left  = (float*)ioData->mBuffers[0].mData;
-      float *right = (float*)ioData->mBuffers[1].mData;
+      AudioUnitSampleType *left  = (AudioUnitSampleType*)ioData->mBuffers[0].mData;
+      AudioUnitSampleType *right = (AudioUnitSampleType*)ioData->mBuffers[1].mData;
       for(int i = 0; i < inNumberFrames; i++ ){
         left[  i ] = 0.0f;
         right[ i ] = 0.0f;
@@ -76,12 +83,12 @@ static OSStatus OutputRenderCallback(void                        *inRefCon,
     
     // Get the desired amount of bytes to copy
     int32_t bytesToCopy = ioData->mBuffers[0].mDataByteSize;
-    float *left  = (float*)ioData->mBuffers[0].mData;
-    float *right = (float*)ioData->mBuffers[1].mData;
+    AudioSampleType *left  = (AudioSampleType*)ioData->mBuffers[0].mData;
+    AudioSampleType *right = (AudioSampleType*)ioData->mBuffers[1].mData;
     
     // Get the available bytes in the circular buffer
     int32_t availableBytes;
-    float *buffer = TPCircularBufferTail(circularBuffer,&availableBytes);
+    AudioSampleType *buffer = TPCircularBufferTail(circularBuffer,&availableBytes);
     
     // Ideally we'd have all the bytes to be copied, but compare it against the available bytes (get min)
     int32_t amount = MIN(bytesToCopy,availableBytes);
@@ -226,7 +233,11 @@ static OSStatus OutputRenderCallback(void                        *inRefCon,
   // Get the hardware sample rate
   Float64 hardwareSampleRate = 44100;
 #if !(TARGET_IPHONE_SIMULATOR)
-  hardwareSampleRate = [[AVAudioSession sharedInstance] sampleRate];
+  UInt32 propSize = sizeof(hardwareSampleRate);
+  [EZAudio checkResult:AudioSessionGetProperty(kAudioSessionProperty_CurrentHardwareSampleRate,
+                                               &propSize,
+                                               &hardwareSampleRate)
+             operation:"Could not get hardware sample rate"];
 #endif
   
   // Setup an ASBD in canonical format by default
@@ -282,7 +293,7 @@ static OSStatus OutputRenderCallback(void                        *inRefCon,
   
   // Setup an ASBD in canonical format by default
   if( !_customASBD ){
-      _outputASBD = [EZAudio stereoFloatNonInterleavedFormatWithSampleRate:44100];
+    _outputASBD = [EZAudio stereoCanonicalNonInterleavedFormatWithSampleRate:44100];
   }
   
   // Set the format for output

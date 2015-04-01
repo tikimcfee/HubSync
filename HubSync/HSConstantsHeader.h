@@ -13,6 +13,7 @@
 
 // Selection Notifications
 static NSString *kHSSelectedRowNotification = @"kHSSelectedRowNotification";
+static NSString *kHSSelectedTaskDetailRowNotification = @"kHSSelectedTaskDetailRowNotification";
 
 // Segue Identifiers
 static NSString *kHSTaskDetailSegueIdentifier = @"kHSTaskDetailSegueIdentifier";

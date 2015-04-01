@@ -37,15 +37,15 @@
 typedef NS_ENUM(NSInteger, EZRecorderFileType)
 {
     /**
-     Recording format that describes AIFF file types. These are uncompressed, LPCM files that are completely lossless, but are large in file size.
+     <#Description#>
      */
     EZRecorderFileTypeAIFF,
     /**
-     Recording format that describes M4A file types. These are compressed, but yield great results especially when file size is an issue.
+     <#Description#>
      */
     EZRecorderFileTypeM4A,
     /**
-     Recording format that describes WAV file types. These are uncompressed, LPCM files that are completely lossless, but are large in file size.
+     <#Description#>
      */
     EZRecorderFileTypeWAV
 };

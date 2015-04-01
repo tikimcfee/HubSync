@@ -33,7 +33,7 @@
     // Do any additional setup after loading the vieww
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(newTaskDetailSelected:)
-                                                 name:kHSSelectedRowNotification
+                                                 name:kHSSelectedTaskDetailRowNotification
                                                object:nil];
 }
 
@@ -48,7 +48,7 @@
 }
 
 - (void)newTaskDetailSelected:(NSNotification*)notification {
-    [_hotSwapViewController swapViewControllers];
+    [_hotSwapViewController swapToViewController:_taskDetailViewController];
 }
 
 

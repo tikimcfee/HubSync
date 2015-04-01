@@ -10,6 +10,7 @@
 
 @interface HSHotSwapViewController : NSViewController
 
-- (void) swapViewControllers;
+- (void)swapViewControllers;
+- (void)swapToViewController:(NSViewController*) viewController;
 
 @end

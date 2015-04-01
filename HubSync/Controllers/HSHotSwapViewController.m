@@ -18,6 +18,9 @@
 @property (strong, nonatomic) NSString *currentSegueIdentifier;
 @property (strong, nonatomic) HSTaskDetailViewController *firstViewController;
 @property (strong, nonatomic) HSTaskDetailViewController *secondViewController;
+
+@property (strong, nonatomic) NSViewController *currentViewController;
+
 @property (assign, nonatomic) BOOL transitionInProgress;
 
 @end
@@ -78,12 +81,21 @@
 {
 //    NSLog(@"%s", __PRETTY_FUNCTION__);
     
+    _currentViewController = toViewController;
     [self addChildViewController:toViewController];
     
     [self transitionFromViewController:fromViewController toViewController:toViewController options:NSViewControllerTransitionNone completionHandler:^{
         [fromViewController removeFromParentViewController];
         self.transitionInProgress = NO;
     }];
+}
+
+- (void)swapToViewController:(NSViewController*) viewController {
+    if(viewController == _currentViewController) {
+        return;
+    }
+    
+    [self swapFromViewController:_currentViewController toViewController:viewController];
 }
 
 - (void)swapViewControllers

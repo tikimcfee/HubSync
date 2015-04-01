@@ -17,7 +17,24 @@
     _taskName.stringValue = sourceTask.taskTitle;
     
     [_priorityColorView setWantsLayer:YES];
-    _priorityColorView.layer.backgroundColor = [NSColor redColor].CGColor;
+    
+    CGColorRef priority;
+    switch (sourceTask.taskPriority) {
+        case CSTaskPriorityHigh:
+            priority = [NSColor redColor].CGColor;
+            break;
+        case CSTaskPriorityMedium:
+            priority = [NSColor yellowColor].CGColor;
+            break;
+        case CSTaskPriorityLow:
+            priority = [NSColor greenColor].CGColor;
+            break;
+        default:
+            priority = [NSColor blueColor].CGColor;
+            break;
+    }
+    
+    _priorityColorView.layer.backgroundColor = priority;
 }
 
 @end

@@ -63,7 +63,7 @@
     
     HSTaskListCell *cell = [self.taskList viewAtColumn:self.taskList.selectedColumn row:self.taskList.selectedRow makeIfNecessary:NO];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:kHSSelectedRowNotification object:cell];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kHSSelectedTaskDetailRowNotification object:cell.sourceTask];
 }
 
 #pragma mark - Data Source
