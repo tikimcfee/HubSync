@@ -19,6 +19,7 @@
 
 @implementation HSTaskDetailViewController
 
+#pragma mark - Lifecycle
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -39,9 +40,6 @@
                                                  name:kHSSelectedTaskDetailRowNotification
                                                object:nil];
     
-//    NSTextContainer* textContainer = [[NSTextContainer alloc] initWithContainerSize:_taskDescriptionTextView.bounds.size];
-//    [textContainer setTextView:_taskDescriptionTextView];
-    
     [_taskPriorityBubble setWantsLayer:YES];
 }
 
@@ -49,6 +47,23 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+#pragma mark - Tableview Datasource && Delegate
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView {
+    return _transientTask.TRANSIENT_taskImages.count;
+}
+
+- (NSView *)tableView:(NSTableView *)tableView
+   viewForTableColumn:(NSTableColumn *)tableColumn
+                  row:(NSInteger)row {
+    
+    
+    NSImageView* newView = [[NSImageView alloc] initWithFrame:CGRectMake(0, 0, 64, 64)];
+    [newView setImage:[_transientTask.TRANSIENT_taskImages objectAtIndex:row]];
+                            
+    return newView;
+}
+
+#pragma mark - Actions
 -(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
     self.audioPlayer = nil;
 }
@@ -66,9 +81,17 @@
     [self.audioPlayer play];
 }
 
+#pragma mark - Notifications
 - (void)newTaskDetailSelected:(NSNotification*)notification {
     if([notification.object isKindOfClass:[CSTaskRealmModel class]]) {
         _sourceTask = notification.object;
+        _transientTask = [[CSTaskTransientObjectStore alloc] initWithRealmModel:_sourceTask];
+        
+        [_transientTask  getAllImagesForTaskWithCompletionBlock:^void(BOOL didFinish) {
+            if(didFinish) {
+                [self setImagesFromTask];
+            }
+        }];
         
         _taskNameLabel.stringValue = _sourceTask.taskTitle;
         [_taskDescriptionTextView setString:_sourceTask.taskDescription];
@@ -91,6 +114,8 @@
         _taskPriorityBubble.layer.cornerRadius = _taskPriorityBubble.bounds.size.width / 2;
         _taskPriorityBubble.layer.backgroundColor = priority;
         
+        /* This is so bad I can't even word.
+         */
         bool hasAudio = NO;
         @try {
             [NSKeyedUnarchiver unarchiveObjectWithData:_sourceTask.taskAudio];
@@ -105,7 +130,20 @@
         } else {
             _taskAudioPlayButton.enabled = NO;
         }
+        /* That was so bad I couldn't even word.
+         * But seriously... we need a doc property that just says no, I don't have audio...
+         */
     }
+}
+
+# pragma mark - Callbacks and UI State
+- (void)setImagesFromTask {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (_transientTask.TRANSIENT_taskImages.count > 0) {
+            [self.taskImageTableView reloadData];
+        }
+    });
+    
 }
 
 @end

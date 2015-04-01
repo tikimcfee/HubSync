@@ -8,15 +8,18 @@
 
 #import <AVFoundation/AVFoundation.h>
 #import <Cocoa/Cocoa.h>
+#import "CSTaskRealmModel.h"
+#import "CSTaskTransientObjectStore.h"
 
-@interface HSTaskDetailViewController : NSViewController <AVAudioPlayerDelegate>
+@interface HSTaskDetailViewController : NSViewController <AVAudioPlayerDelegate, NSTableViewDataSource, NSTableViewDelegate>
 
 @property (strong) IBOutlet NSTextField *taskNameLabel;
 @property (strong) IBOutlet NSTextView *taskDescriptionTextView;
-
 @property (strong) IBOutlet NSButton *taskAudioPlayButton;
-
 @property (strong) IBOutlet NSView *taskPriorityBubble;
 
+@property (strong) IBOutlet NSTableView *taskImageTableView;
+
+@property (strong) CSTaskTransientObjectStore* transientTask;
 
 @end

@@ -60,7 +60,7 @@
                 self.TRANSIENT_taskImages = [NSMutableArray new]; // ... make sure the task now has a container array
                 NSMutableArray* imgs = (NSMutableArray*)imageMutableArray; /// convenience pointer
                 for(NSData* newImageData in imgs) { // for every NSData representation of the image ...
-//                    [self.TRANSIENT_taskImages addObject:[NSImage imageWithData:newImageData]]; // ... add a new UIImage to the container
+                    [self.TRANSIENT_taskImages addObject:[[NSImage alloc]initWithData:newImageData]]; // ... add a new UIImage to the container
                 }
             }
         } else {
@@ -130,19 +130,33 @@
 -(void) saveImages :(CSTaskRealmModel*)model
 {
     
-    // Compute task images on the fly
-    NSMutableArray* tempArrayOfImages = [NSMutableArray arrayWithCapacity:self.TRANSIENT_taskImages.count];
-//    for(UIImage* image in self.TRANSIENT_taskImages) { // for every TRANSIENT UIImage we have on this task
-    
+//    // Compute task images on the fly
+//    NSMutableArray* tempArrayOfImages = [NSMutableArray arrayWithCapacity:self.TRANSIENT_taskImages.count];
+//    for(NSImage* image in self.TRANSIENT_taskImages) { // for every TRANSIENT UIImage we have on this task
+//    
 //        NSLog(@"New size after normalization only is %ld", (unsigned long)[[NSKeyedArchiver archivedDataWithRootObject:image] length]);
 //        NSData* thisImage = UIImageJPEGRepresentation(image, 0.0); // make a new JPEG data object with some compressed size
 //        NSLog(@"New size after JPEG compression is %ld", (unsigned long)[[NSKeyedArchiver archivedDataWithRootObject:thisImage] length]);
-    
+//    
 //        [tempArrayOfImages addObject:thisImage]; // add it to our container
 //    }
-    
+//    
 //    NSData* archivedImages = [NSKeyedArchiver archivedDataWithRootObject:tempArrayOfImages];
 //    model.taskImages_NSDataArray_JPEG = archivedImages;
+}
+
+NSData * NSImageJPEGRepresentation (NSImage * image, CGFloat compressionQuality)
+{
+    if (image == nil) return nil;
+    NSDictionary * dict;
+    dict = [NSDictionary dictionaryWithObjectsAndKeys:
+            [NSNumber numberWithFloat: compressionQuality],
+            NSImageCompressionFactor,
+            nil];
+    
+    NSBitmapImageRep * imageRep;
+    imageRep = [NSBitmapImageRep imageRepWithData: [image TIFFRepresentation]];
+    return [imageRep representationUsingType: NSJPEGFileType properties: dict];
 }
 
 - (CSTaskRealmModel*)BACKING_DATABASE_MODEL {
@@ -197,24 +211,24 @@
 #pragma mark - ASYNC callbacks
 - (void) getAllImagesForTaskWithCompletionBlock:(void (^)(BOOL))completion {
     
-//    if(self.TRANSIENT_taskImages) {
-//        completion(YES);
-//        return;
-//    }
-//    
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        id imageMutableArray = [NSKeyedUnarchiver unarchiveObjectWithData:self.taskImages_NSDataArray_JPEG];
-//        
-//        if([imageMutableArray isKindOfClass:[NSMutableArray class]]) { // if it does ...
-//            self.TRANSIENT_taskImages = [NSMutableArray new]; // ... make sure the task now has a container array
-//            NSMutableArray* imgs = (NSMutableArray*)imageMutableArray; /// convenience pointer
-//            for(NSData* newImageData in imgs) { // for every NSData representation of the image ...
-//                [self.TRANSIENT_taskImages addObject:[UIImage imageWithData:newImageData]]; // ... add a new UIImage to the container
-//            }
-//        }
-//        
-//        completion(YES);
-//    });
+    if(self.TRANSIENT_taskImages) {
+        completion(YES);
+        return;
+    }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        id imageMutableArray = [NSKeyedUnarchiver unarchiveObjectWithData:self.taskImages_NSDataArray_JPEG];
+        
+        if([imageMutableArray isKindOfClass:[NSMutableArray class]]) { // if it does ...
+            self.TRANSIENT_taskImages = [NSMutableArray new]; // ... make sure the task now has a container array
+            NSMutableArray* imgs = (NSMutableArray*)imageMutableArray; /// convenience pointer
+            for(NSData* newImageData in imgs) { // for every NSData representation of the image ...
+                [self.TRANSIENT_taskImages addObject:[[NSImage alloc] initWithData:newImageData]]; // ... add a new UIImage to the container
+            }
+        }
+        
+        completion(YES);
+    });
 }
 
 @end
