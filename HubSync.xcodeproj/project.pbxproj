@@ -29,9 +29,9 @@
 		748338DF1AC9C61900C3F5FD /* CSSessionDataAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338DB1AC9C61900C3F5FD /* CSSessionDataAnalyzer.m */; };
 		748338E01AC9C61900C3F5FD /* CSSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338DD1AC9C61900C3F5FD /* CSSessionManager.m */; };
 		748338E31AC9CE1C00C3F5FD /* HSTaskDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338E21AC9CE1C00C3F5FD /* HSTaskDetailViewController.m */; };
-		748338E81AC9D5F900C3F5FD /* MainDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 748338E71AC9D5F900C3F5FD /* MainDetailView.xib */; };
 		748338F11AC9E0C500C3F5FD /* HSTaskListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338F01AC9E0C500C3F5FD /* HSTaskListViewController.m */; };
 		748338F51AC9E85300C3F5FD /* HSTaskListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338F41AC9E85300C3F5FD /* HSTaskListCell.m */; };
+		74B5FACF1ACCA55F009D45C8 /* HSUserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B5FACE1ACCA55F009D45C8 /* HSUserDetailViewController.m */; };
 		74BE6FBC1ACC73540048B1DC /* AEFloatConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BE6FA21ACC73540048B1DC /* AEFloatConverter.m */; };
 		74BE6FBD1ACC73540048B1DC /* EZAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BE6FA41ACC73540048B1DC /* EZAudio.m */; };
 		74BE6FBE1ACC73540048B1DC /* EZAudioFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BE6FA61ACC73540048B1DC /* EZAudioFile.m */; };
@@ -118,11 +118,12 @@
 		748338DD1AC9C61900C3F5FD /* CSSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSessionManager.m; sourceTree = "<group>"; };
 		748338E11AC9CE1C00C3F5FD /* HSTaskDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSTaskDetailViewController.h; path = Controllers/HSTaskDetailViewController.h; sourceTree = "<group>"; };
 		748338E21AC9CE1C00C3F5FD /* HSTaskDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSTaskDetailViewController.m; path = Controllers/HSTaskDetailViewController.m; sourceTree = "<group>"; };
-		748338E71AC9D5F900C3F5FD /* MainDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainDetailView.xib; path = CustomViews/MainDetailView.xib; sourceTree = "<group>"; };
 		748338EF1AC9E0C500C3F5FD /* HSTaskListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSTaskListViewController.h; path = Controllers/HSTaskListViewController.h; sourceTree = "<group>"; };
 		748338F01AC9E0C500C3F5FD /* HSTaskListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSTaskListViewController.m; path = Controllers/HSTaskListViewController.m; sourceTree = "<group>"; };
 		748338F31AC9E85300C3F5FD /* HSTaskListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSTaskListCell.h; path = Controllers/HSTaskListCell.h; sourceTree = "<group>"; };
 		748338F41AC9E85300C3F5FD /* HSTaskListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSTaskListCell.m; path = Controllers/HSTaskListCell.m; sourceTree = "<group>"; };
+		74B5FACD1ACCA55F009D45C8 /* HSUserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSUserDetailViewController.h; path = Controllers/HSUserDetailViewController.h; sourceTree = "<group>"; };
+		74B5FACE1ACCA55F009D45C8 /* HSUserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSUserDetailViewController.m; path = Controllers/HSUserDetailViewController.m; sourceTree = "<group>"; };
 		74BE6F9F1ACC5D420048B1DC /* HSConstantsHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSConstantsHeader.h; sourceTree = "<group>"; };
 		74BE6FA11ACC73540048B1DC /* AEFloatConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEFloatConverter.h; sourceTree = "<group>"; };
 		74BE6FA21ACC73540048B1DC /* AEFloatConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEFloatConverter.m; sourceTree = "<group>"; };
@@ -222,8 +223,7 @@
 				748338BC1AC9C19C00C3F5FD /* Models */,
 				748338D71AC9C61900C3F5FD /* Session Management */,
 				748338E41AC9CE2000C3F5FD /* Controllers */,
-				7483389D1AC9C0C300C3F5FD /* ViewController.h */,
-				7483389E1AC9C0C300C3F5FD /* ViewController.m */,
+				74B5FACC1ACCA51D009D45C8 /* SharedUI */,
 				748338A21AC9C0C300C3F5FD /* Main.storyboard */,
 				748338961AC9C0C300C3F5FD /* Supporting Files */,
 				74BE6F9F1ACC5D420048B1DC /* HSConstantsHeader.h */,
@@ -304,13 +304,13 @@
 		748338E41AC9CE2000C3F5FD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3F131BD61ACC852500DFFDBE /* User List */,
-				74BE6FD71ACC77240048B1DC /* CSAudioPlotViewController.h */,
-				74BE6FD81ACC77240048B1DC /* CSAudioPlotViewController.m */,
-				748338E91AC9D62B00C3F5FD /* Details */,
-				748338F21AC9E83500C3F5FD /* Task List */,
+				7483389D1AC9C0C300C3F5FD /* ViewController.h */,
+				7483389E1AC9C0C300C3F5FD /* ViewController.m */,
 				458A55D01ACACF5400F73E54 /* HSHotSwapViewController.h */,
 				458A55D11ACACF5400F73E54 /* HSHotSwapViewController.m */,
+				748338F21AC9E83500C3F5FD /* Task List */,
+				3F131BD61ACC852500DFFDBE /* User List */,
+				748338E91AC9D62B00C3F5FD /* Details */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -318,9 +318,8 @@
 		748338E91AC9D62B00C3F5FD /* Details */ = {
 			isa = PBXGroup;
 			children = (
-				748338E71AC9D5F900C3F5FD /* MainDetailView.xib */,
-				748338E11AC9CE1C00C3F5FD /* HSTaskDetailViewController.h */,
-				748338E21AC9CE1C00C3F5FD /* HSTaskDetailViewController.m */,
+				74B5FAD11ACCA56D009D45C8 /* Tasks */,
+				74B5FAD01ACCA563009D45C8 /* Users */,
 			);
 			name = Details;
 			sourceTree = "<group>";
@@ -334,6 +333,33 @@
 				748338F41AC9E85300C3F5FD /* HSTaskListCell.m */,
 			);
 			name = "Task List";
+			sourceTree = "<group>";
+		};
+		74B5FACC1ACCA51D009D45C8 /* SharedUI */ = {
+			isa = PBXGroup;
+			children = (
+				74BE6FD71ACC77240048B1DC /* CSAudioPlotViewController.h */,
+				74BE6FD81ACC77240048B1DC /* CSAudioPlotViewController.m */,
+			);
+			name = SharedUI;
+			sourceTree = "<group>";
+		};
+		74B5FAD01ACCA563009D45C8 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				74B5FACD1ACCA55F009D45C8 /* HSUserDetailViewController.h */,
+				74B5FACE1ACCA55F009D45C8 /* HSUserDetailViewController.m */,
+			);
+			name = Users;
+			sourceTree = "<group>";
+		};
+		74B5FAD11ACCA56D009D45C8 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				748338E11AC9CE1C00C3F5FD /* HSTaskDetailViewController.h */,
+				748338E21AC9CE1C00C3F5FD /* HSTaskDetailViewController.m */,
+			);
+			name = Tasks;
 			sourceTree = "<group>";
 		};
 		74BE6FA01ACC73540048B1DC /* EZAudio */ = {
@@ -482,7 +508,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				748338E81AC9D5F900C3F5FD /* MainDetailView.xib in Resources */,
 				74BE6FC81ACC73540048B1DC /* CHANGELOG in Resources */,
 				748338A11AC9C0C300C3F5FD /* Images.xcassets in Resources */,
 				748338A41AC9C0C300C3F5FD /* Main.storyboard in Resources */,
@@ -507,6 +532,7 @@
 				748338F51AC9E85300C3F5FD /* HSTaskListCell.m in Sources */,
 				748338CD1AC9C19C00C3F5FD /* CSTaskRealmModel.m in Sources */,
 				748338CA1AC9C19C00C3F5FD /* CSComment.m in Sources */,
+				74B5FACF1ACCA55F009D45C8 /* HSUserDetailViewController.m in Sources */,
 				74BE6FC01ACC73540048B1DC /* EZAudioPlot.m in Sources */,
 				74BE6FBD1ACC73540048B1DC /* EZAudio.m in Sources */,
 				748338DF1AC9C61900C3F5FD /* CSSessionDataAnalyzer.m in Sources */,

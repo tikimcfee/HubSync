@@ -8,9 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface HSHotSwapViewController : NSViewController
+@interface HSHotSwapViewController : NSViewController <NSTabViewDelegate>
 
-- (void)swapViewControllers;
+//- (void)swapViewControllers;
 - (void)swapToViewController:(NSViewController*) viewController;
 
 @end

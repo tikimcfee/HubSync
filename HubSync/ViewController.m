@@ -31,26 +31,7 @@
     [super viewDidLoad];
 
     // Do any additional setup after loading the vieww
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(newTaskDetailSelected:)
-                                                 name:kHSSelectedTaskDetailRowNotification
-                                               object:nil];
 }
-
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-- (void)prepareForSegue:(NSStoryboardSegue *)segue sender:(id)sender {
-    if(_hotSwapViewController == nil && [segue.identifier isEqualToString:@"HotSwap"]){
-        _hotSwapViewController = segue.destinationController;
-    }
-}
-
-- (void)newTaskDetailSelected:(NSNotification*)notification {
-    [_hotSwapViewController swapToViewController:_taskDetailViewController];
-}
-
 
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];

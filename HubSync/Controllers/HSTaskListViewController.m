@@ -15,6 +15,8 @@
 
 @interface HSTaskListViewController ()
 @property (strong, nonatomic) RLMNotificationToken* updateUIToken;
+@property (assign, nonatomic) NSInteger lastSelection;
+@property (assign, nonatomic) NSInteger NewSelection;
 @end
 
 @implementation HSTaskListViewController

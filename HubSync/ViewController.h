@@ -7,12 +7,17 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "HSUserDetailViewController.h"
 #import "HSTaskDetailViewController.h"
 #import "HSHotSwapViewController.h"
 
 @interface ViewController : NSViewController
 
 @property (strong) IBOutlet NSTabView *mainTabView;
+@property (strong) IBOutlet NSTabViewItem *tasksTab;
+@property (strong) IBOutlet NSTabViewItem *usersTab;
+
+
 @property (strong) IBOutlet NSView *mainContainerView;
 
 @property (strong) IBOutlet NSView *tasksView;
@@ -21,6 +26,7 @@
 @property (strong) IBOutlet NSView *usersView;
 
 @property (strong, nonatomic) HSTaskDetailViewController* taskDetailViewController;
+@property (strong, nonatomic) HSUserDetailViewController* userDetailViewController;
 
 @property (strong, nonatomic) HSHotSwapViewController* hotSwapViewController;
 

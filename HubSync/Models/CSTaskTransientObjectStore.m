@@ -140,7 +140,7 @@
 //    
 //        [tempArrayOfImages addObject:thisImage]; // add it to our container
 //    }
-//    
+    
 //    NSData* archivedImages = [NSKeyedArchiver archivedDataWithRootObject:tempArrayOfImages];
 //    model.taskImages_NSDataArray_JPEG = archivedImages;
 }
