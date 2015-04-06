@@ -54,13 +54,6 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void)beginCreatingNewTask:(NSNotification*)notification{
-    
-    // TODO: Make sure not editing task; if so, ask for cancel/save, then begin if allowed
-    
-    
-}
-
 #pragma mark - Tableview Datasource && Delegate
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView {
     return _transientTask.TRANSIENT_taskImages.count;

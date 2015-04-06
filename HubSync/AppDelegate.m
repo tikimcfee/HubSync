@@ -25,6 +25,10 @@
     [_globalSessionManager nukeRealm];
 }
 
+- (IBAction)clearSessions:(id)sender {
+    [_globalSessionManager nukeSession];
+}
+
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
 }

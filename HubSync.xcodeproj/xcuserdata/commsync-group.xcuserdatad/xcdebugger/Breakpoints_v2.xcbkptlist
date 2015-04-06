@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HubSync/Controllers/HSTaskDetailViewController.m"
-            timestampString = "450026744.29771"
+            timestampString = "450039269.146081"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "-newTaskDetailSelected:"
             landmarkType = "5">
             <Locations>

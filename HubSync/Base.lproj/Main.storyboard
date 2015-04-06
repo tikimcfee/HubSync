@@ -22,9 +22,6 @@
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
-                                        <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                                         <menuItem title="Services" id="NMo-om-nkz">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
@@ -56,14 +53,27 @@
                                     </items>
                                 </menu>
                             </menuItem>
-                            <menuItem title="Database Actions" id="3x9-Wy-aJk">
+                            <menuItem title="Database" id="3x9-Wy-aJk">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Database Actions" id="1b9-d3-Vf3">
+                                <menu key="submenu" title="Database" id="1b9-d3-Vf3">
                                     <items>
-                                        <menuItem title="Clear all realm objects" id="4sp-7l-R9p">
+                                        <menuItem title="Wipe all Realm Data" id="4sp-7l-R9p">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="clearDatabase:" target="Voe-Tx-rLC" id="sA5-tA-SFX"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Connectivity" id="H9y-Is-xT1">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Connectivity" id="Shu-OW-N2V">
+                                    <items>
+                                        <menuItem title="Reestablish self in network" id="8r0-as-E6f">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="clearSessions:" target="Voe-Tx-rLC" id="Ksg-k6-juq"/>
                                             </connections>
                                         </menuItem>
                                     </items>
