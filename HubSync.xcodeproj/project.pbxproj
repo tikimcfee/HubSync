@@ -11,6 +11,7 @@
 		3F131BDC1ACC89BC00DFFDBE /* HSUserListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F131BDB1ACC89BC00DFFDBE /* HSUserListCell.m */; };
 		458A55D21ACACF5400F73E54 /* HSHotSwapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 458A55D11ACACF5400F73E54 /* HSHotSwapViewController.m */; };
 		45AB078C1AD2C0AA00FE9614 /* HSTaskCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AB078B1AD2C0AA00FE9614 /* HSTaskCreationViewController.m */; };
+		7407A8151AD31ACC00FE5D4D /* CSTaskRevisionRealmModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407A8141AD31ACC00FE5D4D /* CSTaskRevisionRealmModel.m */; };
 		7483389A1AC9C0C300C3F5FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338991AC9C0C300C3F5FD /* AppDelegate.m */; };
 		7483389C1AC9C0C300C3F5FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7483389B1AC9C0C300C3F5FD /* main.m */; };
 		7483389F1AC9C0C300C3F5FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7483389E1AC9C0C300C3F5FD /* ViewController.m */; };
@@ -87,6 +88,8 @@
 		458A55D11ACACF5400F73E54 /* HSHotSwapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSHotSwapViewController.m; path = Controllers/HSHotSwapViewController.m; sourceTree = "<group>"; };
 		45AB078A1AD2C0AA00FE9614 /* HSTaskCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSTaskCreationViewController.h; path = Controllers/HSTaskCreationViewController.h; sourceTree = "<group>"; };
 		45AB078B1AD2C0AA00FE9614 /* HSTaskCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSTaskCreationViewController.m; path = Controllers/HSTaskCreationViewController.m; sourceTree = "<group>"; };
+		7407A8131AD31ACC00FE5D4D /* CSTaskRevisionRealmModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTaskRevisionRealmModel.h; sourceTree = "<group>"; };
+		7407A8141AD31ACC00FE5D4D /* CSTaskRevisionRealmModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTaskRevisionRealmModel.m; sourceTree = "<group>"; };
 		748338931AC9C0C300C3F5FD /* HubSync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HubSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		748338971AC9C0C300C3F5FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		748338981AC9C0C300C3F5FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -296,6 +299,8 @@
 				748338C61AC9C19C00C3F5FD /* CSTaskRealmModel.m */,
 				748338C71AC9C19C00C3F5FD /* CSTaskTransientObjectStore.h */,
 				748338C81AC9C19C00C3F5FD /* CSTaskTransientObjectStore.m */,
+				7407A8131AD31ACC00FE5D4D /* CSTaskRevisionRealmModel.h */,
+				7407A8141AD31ACC00FE5D4D /* CSTaskRevisionRealmModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -565,6 +570,7 @@
 				748338CB1AC9C19C00C3F5FD /* CSCommentRealmModel.m in Sources */,
 				74BE6FC61ACC73540048B1DC /* EZRecorder.m in Sources */,
 				3F131BD91ACC876600DFFDBE /* HSUserListViewController.m in Sources */,
+				7407A8151AD31ACC00FE5D4D /* CSTaskRevisionRealmModel.m in Sources */,
 				74BE6FBF1ACC73540048B1DC /* EZAudioPlayer.m in Sources */,
 				748338CC1AC9C19C00C3F5FD /* CSPeerHistoryRealmModel.m in Sources */,
 				74BE6FC31ACC73540048B1DC /* EZMicrophone.m in Sources */,

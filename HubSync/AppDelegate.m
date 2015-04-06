@@ -29,6 +29,10 @@
     [_globalSessionManager nukeSession];
 }
 
+- (IBAction)clearPeerHistory:(id)sender {
+    [_globalSessionManager nukeHistory];
+}
+
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
 }

@@ -8,7 +8,7 @@
 
 #import <Realm/Realm.h>
 
-@interface CSPeerHistoryRealmModel : RLMObject <NSCoding>
+@interface CSPeerHistoryRealmModel : RLMObject <NSCoding >
 
 
 //@property (strong, nonatomic) NSString* peerID;

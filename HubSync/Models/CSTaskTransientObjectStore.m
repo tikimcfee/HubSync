@@ -17,6 +17,11 @@
 #define kTaskDescription @"kTaskDescription"
 #define kTaskImages @"kTaskImages"
 #define kTaskAudio @"taskAudio"
+#define kAssignedID @"kAssignedID"
+
+#define kTag @"kTag"
+#define kCompleted @"kCompleted"
+
 
 @implementation CSTaskTransientObjectStore
 
@@ -29,8 +34,12 @@
         self.concatenatedID = model.concatenatedID;
         
         self.taskTitle = model.taskTitle;
+        self.assignedID = model.assignedID;
         self.taskDescription = model.taskDescription;
         self.taskPriority = model.taskPriority;
+        
+        self.tag = model.tag;
+        self.completed = model.completed;
         
         self.taskAudio = model.taskAudio;
         self.taskImages_NSDataArray_JPEG = model.taskImages_NSDataArray_JPEG;
@@ -47,8 +56,13 @@
         self.concatenatedID = [aDecoder decodeObjectForKey:kConcatenatedID];
         
         self.taskTitle = [aDecoder decodeObjectForKey:kTaskTitle];
+        self.assignedID = [aDecoder decodeObjectForKey:kAssignedID];
         self.taskDescription = [aDecoder decodeObjectForKey:kTaskDescription];
         self.taskPriority = [aDecoder decodeIntForKey:kTaskPriority];
+        
+        self.tag = [aDecoder decodeObjectForKey:kTag];
+        self.completed = [aDecoder decodeBoolForKey:kCompleted];
+        
         
         // see if the decoder gives us an image array
         id imageMutableArray_DATA = [aDecoder decodeObjectForKey:kTaskImages];
@@ -87,23 +101,33 @@
     [aCoder encodeObject:self.concatenatedID forKey:kConcatenatedID];
     
     [aCoder encodeObject:self.taskTitle forKey:kTaskTitle];
+    
+    [aCoder encodeObject:self.assignedID forKey:kAssignedID];
+
     [aCoder encodeObject:self.taskDescription forKey:kTaskDescription];
     [aCoder encodeInteger:self.taskPriority forKey:kTaskPriority];
 
     [aCoder encodeObject:self.taskImages_NSDataArray_JPEG forKey:kTaskImages];
     [aCoder encodeObject:self.taskAudio forKey:kTaskAudio];
+    
+    [aCoder encodeObject:self.tag forKey:kTag];
+    [aCoder encodeBool:self.completed forKey:kCompleted];
+    
 }
 
 
 #pragma mark - Persistence indirection layer
 - (void)setAndPersistPropertiesOfNewTaskObject:(CSTaskRealmModel*)model
                                        inRealm:(RLMRealm*)realm
-                               withTransaction:(BOOL)transcation
+                               withTransaction:(bool)transcation
 {
     if(transcation)
         [realm beginWriteTransaction];
     
     model.UUID = self.UUID;
+    model.assignedID = self.assignedID ? self.assignedID : @"Unassigned";
+    model.tag = self.tag ? self.tag : @"untagged";
+    model.completed = self.completed;
     model.deviceID = self.deviceID;
     model.concatenatedID = self.concatenatedID;
     
@@ -129,14 +153,15 @@
 
 -(void) saveImages :(CSTaskRealmModel*)model
 {
-//    // Compute task images on the fly
+    
+    // Compute task images on the fly
     NSMutableArray* tempArrayOfImages = [NSMutableArray arrayWithCapacity:self.TRANSIENT_taskImages.count];
     for(NSImage* image in self.TRANSIENT_taskImages) { // for every TRANSIENT UIImage we have on this task
     
         NSLog(@"New size after normalization only is %ld", (unsigned long)[[NSKeyedArchiver archivedDataWithRootObject:image] length]);
         NSData* thisImage = NSImageJPEGRepresentation(image, 0.0); // make a new JPEG data object with some compressed size
         NSLog(@"New size after JPEG compression is %ld", (unsigned long)[[NSKeyedArchiver archivedDataWithRootObject:thisImage] length]);
-    
+        
         [tempArrayOfImages addObject:thisImage]; // add it to our container
     }
     

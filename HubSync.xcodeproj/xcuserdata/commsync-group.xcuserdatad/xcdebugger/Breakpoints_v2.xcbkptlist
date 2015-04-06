@@ -16,47 +16,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HubSync/Controllers/HSTaskDetailViewController.m"
-            timestampString = "450039269.146081"
+            timestampString = "450049951.851216"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "-newTaskDetailSelected:"
+            startingLineNumber = "227"
+            endingLineNumber = "227"
+            landmarkName = "-saveEdits:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[HSTaskDetailViewController newTaskDetailSelected:]"
-                  moduleName = "HubSync"
-                  urlString = "file:///Users/commsync-group/Desktop/CommSync/HubSync/HubSync/Controllers/HSTaskDetailViewController.m"
-                  timestampString = "450026744.622525"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "108"
-                  endingLineNumber = "108"
-                  offsetFromSymbolStart = "363">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__52-[HSTaskDetailViewController newTaskDetailSelected:]_block_invoke"
-                  moduleName = "HubSync"
-                  urlString = "file:///Users/commsync-group/Desktop/CommSync/HubSync/HubSync/Controllers/HSTaskDetailViewController.m"
-                  timestampString = "450026744.622664"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "109"
-                  endingLineNumber = "109"
-                  offsetFromSymbolStart = "22">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HubSync/Controllers/HSTaskDetailViewController.m"
+            timestampString = "450049951.851216"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "-viewForRevisionTableView:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
