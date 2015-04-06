@@ -129,20 +129,19 @@
 
 -(void) saveImages :(CSTaskRealmModel*)model
 {
-    
 //    // Compute task images on the fly
-//    NSMutableArray* tempArrayOfImages = [NSMutableArray arrayWithCapacity:self.TRANSIENT_taskImages.count];
-//    for(NSImage* image in self.TRANSIENT_taskImages) { // for every TRANSIENT UIImage we have on this task
-//    
-//        NSLog(@"New size after normalization only is %ld", (unsigned long)[[NSKeyedArchiver archivedDataWithRootObject:image] length]);
-//        NSData* thisImage = UIImageJPEGRepresentation(image, 0.0); // make a new JPEG data object with some compressed size
-//        NSLog(@"New size after JPEG compression is %ld", (unsigned long)[[NSKeyedArchiver archivedDataWithRootObject:thisImage] length]);
-//    
-//        [tempArrayOfImages addObject:thisImage]; // add it to our container
-//    }
+    NSMutableArray* tempArrayOfImages = [NSMutableArray arrayWithCapacity:self.TRANSIENT_taskImages.count];
+    for(NSImage* image in self.TRANSIENT_taskImages) { // for every TRANSIENT UIImage we have on this task
     
-//    NSData* archivedImages = [NSKeyedArchiver archivedDataWithRootObject:tempArrayOfImages];
-//    model.taskImages_NSDataArray_JPEG = archivedImages;
+        NSLog(@"New size after normalization only is %ld", (unsigned long)[[NSKeyedArchiver archivedDataWithRootObject:image] length]);
+        NSData* thisImage = NSImageJPEGRepresentation(image, 0.0); // make a new JPEG data object with some compressed size
+        NSLog(@"New size after JPEG compression is %ld", (unsigned long)[[NSKeyedArchiver archivedDataWithRootObject:thisImage] length]);
+    
+        [tempArrayOfImages addObject:thisImage]; // add it to our container
+    }
+    
+    NSData* archivedImages = [NSKeyedArchiver archivedDataWithRootObject:tempArrayOfImages];
+    model.taskImages_NSDataArray_JPEG = archivedImages;
 }
 
 NSData * NSImageJPEGRepresentation (NSImage * image, CGFloat compressionQuality)

@@ -35,6 +35,8 @@
 
     // Do any additional setup after loading the vieww
     _sb = [NSStoryboard storyboardWithName:@"Main" bundle:nil];
+    [_taskCreationButton setWantsLayer:YES];
+    _taskCreationButton.layer.backgroundColor = [NSColor blueColor].CGColor;
 }
 
 - (void)setRepresentedObject:(id)representedObject {
@@ -42,20 +44,7 @@
 }
 
 - (IBAction)creationButtonClicked:(id)sender {
-//    [[NSNotificationCenter defaultCenter] postNotificationName:kHSTaskCreationButtonClickedNotification object:nil];
-    
-    //    _taskDetailController = [[HSTaskDetailViewController alloc]
-    //                             initWithNibName:@"HSTaskDetailViewController"
-    //                             bundle:[NSBundle mainBundle]];
-    
-    
-    //    [_mainContainerView addSubview: _taskDetailController.view];
-    //    [_taskDetailController.view setNeedsLayout:YES];
-    
-//    HSTaskCreationViewController* newTaskController = [[HSTaskCreationViewController alloc] initWithNibName:nil bundle:[NSBundle mainBundle]];
-    
     HSTaskCreationViewController* ntc = [_sb instantiateControllerWithIdentifier:@"HSTaskCreationViewController"];
-    
     [self presentViewControllerAsModalWindow:ntc];
 }
 

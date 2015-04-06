@@ -75,6 +75,10 @@
     return newView;
 }
 
+- (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row{
+    return self.taskImageTableView.frame.size.width;
+}
+
 #pragma mark - Actions
 -(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
     self.audioPlayer = nil;
@@ -151,9 +155,7 @@
 # pragma mark - Callbacks and UI State
 - (void)setImagesFromTask {
     dispatch_async(dispatch_get_main_queue(), ^{
-        if (_transientTask.TRANSIENT_taskImages.count > 0) {
             [self.taskImageTableView reloadData];
-        }
     });
     
 }
