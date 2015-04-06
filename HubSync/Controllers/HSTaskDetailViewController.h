@@ -22,4 +22,8 @@
 
 @property (strong) CSTaskTransientObjectStore* transientTask;
 
+// Actions
+@property (weak) IBOutlet NSButton *cancelCreationButton;
+
+
 @end

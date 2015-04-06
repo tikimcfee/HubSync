@@ -40,11 +40,23 @@
                                                  name:kHSSelectedTaskDetailRowNotification
                                                object:nil];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(beginCreatingNewTask:)
+                                                 name:kHSTaskCreationButtonClickedNotification
+                                               object:nil];
+    
     [_taskPriorityBubble setWantsLayer:YES];
 }
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)beginCreatingNewTask:(NSNotification*)notification{
+    
+    // TODO: Make sure not editing task; if so, ask for cancel/save, then begin if allowed
+    
+    
 }
 
 #pragma mark - Tableview Datasource && Delegate

@@ -10,6 +10,7 @@
 		3F131BD91ACC876600DFFDBE /* HSUserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F131BD81ACC876600DFFDBE /* HSUserListViewController.m */; };
 		3F131BDC1ACC89BC00DFFDBE /* HSUserListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F131BDB1ACC89BC00DFFDBE /* HSUserListCell.m */; };
 		458A55D21ACACF5400F73E54 /* HSHotSwapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 458A55D11ACACF5400F73E54 /* HSHotSwapViewController.m */; };
+		45AB078C1AD2C0AA00FE9614 /* HSTaskCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AB078B1AD2C0AA00FE9614 /* HSTaskCreationViewController.m */; };
 		7483389A1AC9C0C300C3F5FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338991AC9C0C300C3F5FD /* AppDelegate.m */; };
 		7483389C1AC9C0C300C3F5FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7483389B1AC9C0C300C3F5FD /* main.m */; };
 		7483389F1AC9C0C300C3F5FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7483389E1AC9C0C300C3F5FD /* ViewController.m */; };
@@ -84,6 +85,8 @@
 		3F131BDB1ACC89BC00DFFDBE /* HSUserListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSUserListCell.m; path = Controllers/HSUserListCell.m; sourceTree = "<group>"; };
 		458A55D01ACACF5400F73E54 /* HSHotSwapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSHotSwapViewController.h; path = Controllers/HSHotSwapViewController.h; sourceTree = "<group>"; };
 		458A55D11ACACF5400F73E54 /* HSHotSwapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSHotSwapViewController.m; path = Controllers/HSHotSwapViewController.m; sourceTree = "<group>"; };
+		45AB078A1AD2C0AA00FE9614 /* HSTaskCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSTaskCreationViewController.h; path = Controllers/HSTaskCreationViewController.h; sourceTree = "<group>"; };
+		45AB078B1AD2C0AA00FE9614 /* HSTaskCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSTaskCreationViewController.m; path = Controllers/HSTaskCreationViewController.m; sourceTree = "<group>"; };
 		748338931AC9C0C300C3F5FD /* HubSync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HubSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		748338971AC9C0C300C3F5FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		748338981AC9C0C300C3F5FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -195,6 +198,15 @@
 				3F131BDB1ACC89BC00DFFDBE /* HSUserListCell.m */,
 			);
 			name = "User List";
+			sourceTree = "<group>";
+		};
+		45AB078D1AD2C0B000FE9614 /* Task Creation */ = {
+			isa = PBXGroup;
+			children = (
+				45AB078A1AD2C0AA00FE9614 /* HSTaskCreationViewController.h */,
+				45AB078B1AD2C0AA00FE9614 /* HSTaskCreationViewController.m */,
+			);
+			name = "Task Creation";
 			sourceTree = "<group>";
 		};
 		7483388A1AC9C0C300C3F5FD = {
@@ -311,6 +323,7 @@
 				748338F21AC9E83500C3F5FD /* Task List */,
 				3F131BD61ACC852500DFFDBE /* User List */,
 				748338E91AC9D62B00C3F5FD /* Details */,
+				45AB078D1AD2C0B000FE9614 /* Task Creation */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -538,6 +551,7 @@
 				748338DF1AC9C61900C3F5FD /* CSSessionDataAnalyzer.m in Sources */,
 				458A55D21ACACF5400F73E54 /* HSHotSwapViewController.m in Sources */,
 				7483389F1AC9C0C300C3F5FD /* ViewController.m in Sources */,
+				45AB078C1AD2C0AA00FE9614 /* HSTaskCreationViewController.m in Sources */,
 				74BE6FBE1ACC73540048B1DC /* EZAudioFile.m in Sources */,
 				748338C91AC9C19C00C3F5FD /* CSChatMessageRealmModel.m in Sources */,
 				748338E31AC9CE1C00C3F5FD /* HSTaskDetailViewController.m in Sources */,

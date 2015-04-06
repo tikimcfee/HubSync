@@ -13,22 +13,25 @@
 
 @interface ViewController : NSViewController
 
+// Top level containers and views
+@property (strong) IBOutlet NSView *mainContainerView;
 @property (strong) IBOutlet NSTabView *mainTabView;
 @property (strong) IBOutlet NSTabViewItem *tasksTab;
 @property (strong) IBOutlet NSTabViewItem *usersTab;
 
 
-@property (strong) IBOutlet NSView *mainContainerView;
-
+// Main views
 @property (strong) IBOutlet NSView *tasksView;
-@property (strong) IBOutlet NSScrollView *taskList;
-
 @property (strong) IBOutlet NSView *usersView;
 
-@property (strong, nonatomic) HSTaskDetailViewController* taskDetailViewController;
-@property (strong, nonatomic) HSUserDetailViewController* userDetailViewController;
+// Actions
+@property (weak) IBOutlet NSButton *taskCreationButton;
 
-@property (strong, nonatomic) HSHotSwapViewController* hotSwapViewController;
+
+//@property (strong, nonatomic) HSTaskDetailViewController* taskDetailViewController;
+//@property (strong, nonatomic) HSUserDetailViewController* userDetailViewController;
+//
+//@property (strong, nonatomic) HSHotSwapViewController* hotSwapViewController;
 
 
 

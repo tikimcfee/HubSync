@@ -15,6 +15,9 @@
 static NSString *kHSSelectedUserDetailNotification = @"kHSSelectedUserDetailNotification";
 static NSString *kHSSelectedTaskDetailRowNotification = @"kHSSelectedTaskDetailRowNotification";
 
+// Action Notifications
+static NSString *kHSTaskCreationButtonClickedNotification = @"kHSTaskCreationButtonClickedNotification";
+
 // Segue Identifiers
 static NSString *kHSTaskDetailSegueIdentifier = @"kHSTaskDetailSegueIdentifier";
 static NSString *kHSUserDetailSegueIdentifier = @"kHSUserDetailSegueIdentifier";

@@ -75,12 +75,18 @@
     if ([segue.identifier isEqualToString:SegueIdentifierFirst]) {
         self.taskDetailViewController = segue.destinationController;
         [self.taskDetailViewController.view setWantsLayer:YES];
+        self.taskDetailViewController.view.bounds = CGRectMake(0, 0,
+                                                               CGRectGetWidth(self.view.bounds),
+                                                               CGRectGetHeight(self.view.bounds));
     }
     
     if ([segue.identifier isEqualToString:SegueIdentifierSecond]) {
         self.userDetailViewController = segue.destinationController;
         [self.userDetailViewController.view setWantsLayer:YES];
         self.userDetailViewController.userDisplayName = sender;
+        self.userDetailViewController.view.bounds = CGRectMake(0, 0,
+                                                               CGRectGetWidth(self.view.bounds),
+                                                               CGRectGetHeight(self.view.bounds));
     }
     
     // If we're going to the first view controller.

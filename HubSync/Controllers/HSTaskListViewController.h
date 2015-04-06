@@ -11,5 +11,4 @@
 @interface HSTaskListViewController : NSViewController <NSTableViewDataSource, NSTableViewDelegate>
 @property (strong) IBOutlet NSTableView *taskList;
 
-
 @end
