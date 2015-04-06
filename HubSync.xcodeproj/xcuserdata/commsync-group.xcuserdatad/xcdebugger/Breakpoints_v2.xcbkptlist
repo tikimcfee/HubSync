@@ -16,33 +16,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HubSync/Models/CSTaskTransientObjectStore.m"
-            timestampString = "450024210.122241"
+            filePath = "HubSync/Controllers/HSTaskDetailViewController.m"
+            timestampString = "450026744.29771"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "222"
-            endingLineNumber = "222"
-            landmarkName = "-getAllImagesForTaskWithCompletionBlock:"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "-newTaskDetailSelected:"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HubSync/Models/CSTaskTransientObjectStore.m"
-            timestampString = "450024317.398967"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
-            landmarkName = "-saveImages:"
-            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HSTaskDetailViewController newTaskDetailSelected:]"
+                  moduleName = "HubSync"
+                  urlString = "file:///Users/commsync-group/Desktop/CommSync/HubSync/HubSync/Controllers/HSTaskDetailViewController.m"
+                  timestampString = "450026744.622525"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "363">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__52-[HSTaskDetailViewController newTaskDetailSelected:]_block_invoke"
+                  moduleName = "HubSync"
+                  urlString = "file:///Users/commsync-group/Desktop/CommSync/HubSync/HubSync/Controllers/HSTaskDetailViewController.m"
+                  timestampString = "450026744.622664"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "22">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

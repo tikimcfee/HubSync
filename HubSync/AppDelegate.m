@@ -21,6 +21,10 @@
     _globalSessionManager = [[CSSessionManager alloc] initWithID:_userDisplayName];
 }
 
+- (IBAction)clearDatabase:(id)sender {
+    [_globalSessionManager nukeRealm];
+}
+
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
 }

@@ -15,6 +15,8 @@
 @property (weak, nonatomic) CSTaskRealmModel* sourceTask;
 @property (strong, nonatomic) AVAudioPlayer* audioPlayer;
 
+@property (strong) NSData* nullData;
+
 @end
 
 @implementation HSTaskDetailViewController
@@ -130,14 +132,11 @@
         _taskPriorityBubble.layer.cornerRadius = _taskPriorityBubble.bounds.size.width / 2;
         _taskPriorityBubble.layer.backgroundColor = priority;
         
-        /* This is so bad I can't even word.
+
+        /* This isn't SO bad...
          */
         bool hasAudio = NO;
-        @try {
-            [NSKeyedUnarchiver unarchiveObjectWithData:_sourceTask.taskAudio];
-        }
-        @catch (NSException *exception) {
-            NSLog(@"HAS AUDIO");
+        if(_sourceTask.taskAudio.length > 512) {
             hasAudio = YES;
         }
         
@@ -146,8 +145,9 @@
         } else {
             _taskAudioPlayButton.enabled = NO;
         }
-        /* That was so bad I couldn't even word.
-         * But seriously... we need a doc property that just says no, I don't have audio...
+        /*
+         * But seriously... we need a doc property that just says no, I don't have audio... or a dictionary
+         * container for properties.. that might make some sense, give us easier data existence checks.
          */
     }
 }
