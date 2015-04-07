@@ -11,7 +11,7 @@
 #import "CSTaskRealmModel.h"
 #import "CSTaskTransientObjectStore.h"
 
-@interface HSTaskDetailViewController : NSViewController <AVAudioPlayerDelegate, NSTableViewDataSource, NSTableViewDelegate, NSTextViewDelegate>
+@interface HSTaskDetailViewController : NSViewController <AVAudioPlayerDelegate, NSTableViewDataSource, NSTableViewDelegate, NSTextViewDelegate, NSWindowDelegate>
 
 @property (strong) IBOutlet NSTextField *taskNameLabel;
 @property (strong) IBOutlet NSTextView *taskDescriptionTextView;

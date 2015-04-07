@@ -11,6 +11,9 @@
 		3F131BDC1ACC89BC00DFFDBE /* HSUserListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F131BDB1ACC89BC00DFFDBE /* HSUserListCell.m */; };
 		458A55D21ACACF5400F73E54 /* HSHotSwapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 458A55D11ACACF5400F73E54 /* HSHotSwapViewController.m */; };
 		45AB078C1AD2C0AA00FE9614 /* HSTaskCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AB078B1AD2C0AA00FE9614 /* HSTaskCreationViewController.m */; };
+		45AB07901AD4362E00FE9614 /* HSRevisionViewerPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AB078F1AD4362E00FE9614 /* HSRevisionViewerPanel.m */; };
+		45AB07931AD436DA00FE9614 /* HSRevisionViewerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AB07921AD436DA00FE9614 /* HSRevisionViewerController.m */; };
+		45AB07961AD43DFF00FE9614 /* HSRevisionViewerWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AB07951AD43DFF00FE9614 /* HSRevisionViewerWindowController.m */; };
 		7407A8151AD31ACC00FE5D4D /* CSTaskRevisionRealmModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407A8141AD31ACC00FE5D4D /* CSTaskRevisionRealmModel.m */; };
 		7483389A1AC9C0C300C3F5FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338991AC9C0C300C3F5FD /* AppDelegate.m */; };
 		7483389C1AC9C0C300C3F5FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7483389B1AC9C0C300C3F5FD /* main.m */; };
@@ -88,6 +91,12 @@
 		458A55D11ACACF5400F73E54 /* HSHotSwapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSHotSwapViewController.m; path = Controllers/HSHotSwapViewController.m; sourceTree = "<group>"; };
 		45AB078A1AD2C0AA00FE9614 /* HSTaskCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSTaskCreationViewController.h; path = Controllers/HSTaskCreationViewController.h; sourceTree = "<group>"; };
 		45AB078B1AD2C0AA00FE9614 /* HSTaskCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSTaskCreationViewController.m; path = Controllers/HSTaskCreationViewController.m; sourceTree = "<group>"; };
+		45AB078E1AD4362E00FE9614 /* HSRevisionViewerPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSRevisionViewerPanel.h; path = Controllers/HSRevisionViewerPanel.h; sourceTree = "<group>"; };
+		45AB078F1AD4362E00FE9614 /* HSRevisionViewerPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSRevisionViewerPanel.m; path = Controllers/HSRevisionViewerPanel.m; sourceTree = "<group>"; };
+		45AB07911AD436DA00FE9614 /* HSRevisionViewerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSRevisionViewerController.h; path = Controllers/HSRevisionViewerController.h; sourceTree = "<group>"; };
+		45AB07921AD436DA00FE9614 /* HSRevisionViewerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSRevisionViewerController.m; path = Controllers/HSRevisionViewerController.m; sourceTree = "<group>"; };
+		45AB07941AD43DFF00FE9614 /* HSRevisionViewerWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSRevisionViewerWindowController.h; path = Controllers/HSRevisionViewerWindowController.h; sourceTree = "<group>"; };
+		45AB07951AD43DFF00FE9614 /* HSRevisionViewerWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSRevisionViewerWindowController.m; path = Controllers/HSRevisionViewerWindowController.m; sourceTree = "<group>"; };
 		7407A8131AD31ACC00FE5D4D /* CSTaskRevisionRealmModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTaskRevisionRealmModel.h; sourceTree = "<group>"; };
 		7407A8141AD31ACC00FE5D4D /* CSTaskRevisionRealmModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTaskRevisionRealmModel.m; sourceTree = "<group>"; };
 		748338931AC9C0C300C3F5FD /* HubSync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HubSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +221,19 @@
 			name = "Task Creation";
 			sourceTree = "<group>";
 		};
+		45AB07971AD4436300FE9614 /* Revisions */ = {
+			isa = PBXGroup;
+			children = (
+				45AB07911AD436DA00FE9614 /* HSRevisionViewerController.h */,
+				45AB07941AD43DFF00FE9614 /* HSRevisionViewerWindowController.h */,
+				45AB07951AD43DFF00FE9614 /* HSRevisionViewerWindowController.m */,
+				45AB07921AD436DA00FE9614 /* HSRevisionViewerController.m */,
+				45AB078E1AD4362E00FE9614 /* HSRevisionViewerPanel.h */,
+				45AB078F1AD4362E00FE9614 /* HSRevisionViewerPanel.m */,
+			);
+			name = Revisions;
+			sourceTree = "<group>";
+		};
 		7483388A1AC9C0C300C3F5FD = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +351,7 @@
 				3F131BD61ACC852500DFFDBE /* User List */,
 				748338E91AC9D62B00C3F5FD /* Details */,
 				45AB078D1AD2C0B000FE9614 /* Task Creation */,
+				45AB07971AD4436300FE9614 /* Revisions */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -552,6 +575,7 @@
 				748338CA1AC9C19C00C3F5FD /* CSComment.m in Sources */,
 				74B5FACF1ACCA55F009D45C8 /* HSUserDetailViewController.m in Sources */,
 				74BE6FC01ACC73540048B1DC /* EZAudioPlot.m in Sources */,
+				45AB07901AD4362E00FE9614 /* HSRevisionViewerPanel.m in Sources */,
 				74BE6FBD1ACC73540048B1DC /* EZAudio.m in Sources */,
 				748338DF1AC9C61900C3F5FD /* CSSessionDataAnalyzer.m in Sources */,
 				458A55D21ACACF5400F73E54 /* HSHotSwapViewController.m in Sources */,
@@ -569,11 +593,13 @@
 				7483389A1AC9C0C300C3F5FD /* AppDelegate.m in Sources */,
 				748338CB1AC9C19C00C3F5FD /* CSCommentRealmModel.m in Sources */,
 				74BE6FC61ACC73540048B1DC /* EZRecorder.m in Sources */,
+				45AB07931AD436DA00FE9614 /* HSRevisionViewerController.m in Sources */,
 				3F131BD91ACC876600DFFDBE /* HSUserListViewController.m in Sources */,
 				7407A8151AD31ACC00FE5D4D /* CSTaskRevisionRealmModel.m in Sources */,
 				74BE6FBF1ACC73540048B1DC /* EZAudioPlayer.m in Sources */,
 				748338CC1AC9C19C00C3F5FD /* CSPeerHistoryRealmModel.m in Sources */,
 				74BE6FC31ACC73540048B1DC /* EZMicrophone.m in Sources */,
+				45AB07961AD43DFF00FE9614 /* HSRevisionViewerWindowController.m in Sources */,
 				74BE6FBC1ACC73540048B1DC /* AEFloatConverter.m in Sources */,
 				748338DE1AC9C61900C3F5FD /* CSRealmWriteOperation.m in Sources */,
 				74BE6FC41ACC73540048B1DC /* EZOutput.m in Sources */,

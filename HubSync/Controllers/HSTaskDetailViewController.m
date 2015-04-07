@@ -9,6 +9,8 @@
 #import "HSTaskDetailViewController.h"
 #import "CSTaskRealmModel.h"
 #import "HSConstantsHeader.h"
+#import "HSRevisionViewerPanel.h"
+#import "HSRevisionViewerController.h"
 
 @interface HSTaskDetailViewController ()
 
@@ -17,6 +19,10 @@
 
 @property (strong, nonatomic) CSTaskRevisionRealmModel* currentRevisions;
 @property (strong, nonatomic) NSMutableDictionary* unsavedChanges;
+
+@property (strong, nonatomic) HSRevisionViewerController* revisionViewController;
+@property (strong, nonatomic) HSRevisionViewerPanel* revisionPanel;
+@property (strong, nonatomic) NSWindowController* revisionWindow;
 
 @end
 
@@ -69,6 +75,35 @@
 }
 
 #pragma mark - Tableview Datasource && Delegate
+- (void)tableViewSelectionDidChange:(NSNotification *)aNotification {
+    if (_taskRevisionsTableView.selectedRow == -1) {
+        return;
+    }
+    
+    if(aNotification.object == _taskRevisionsTableView) {
+        if(_revisionWindow == nil) {
+            NSWindowController* window = [[NSStoryboard storyboardWithName:@"Main" bundle:nil]
+                                                 instantiateControllerWithIdentifier:@"RevisionsWindow"];
+            _revisionWindow = window;
+            _revisionWindow.window.delegate = self;
+            _revisionViewController = _revisionWindow.contentViewController;
+            
+            [window showWindow:self];
+        }
+        
+        [_revisionViewController configureWithSourceTask:_sourceTask
+                                          sourceRevision:[_sourceTask.revisions
+                                                          objectAtIndex:_taskRevisionsTableView.selectedRow]];
+    }
+}
+
+- (void)windowWillClose:(NSNotification *)notification {
+    if(notification.object == _revisionWindow.window) {
+        _revisionWindow = nil;
+        _revisionViewController = nil;
+    }
+}
+
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView {
     if(aTableView == _taskImageTableView) {
         return _transientTask.TRANSIENT_taskImages.count;
