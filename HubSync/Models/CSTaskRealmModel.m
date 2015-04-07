@@ -11,6 +11,7 @@
 
 @interface CSTaskRealmModel()
 
+
 @end
 
 @implementation CSTaskRealmModel
@@ -100,6 +101,89 @@
     [realm beginWriteTransaction];
     [self.revisions addObject :revision];
     [realm commitWriteTransaction];
+}
+
++ (NSString*)stringForProperty:(CSTaskProperty)property {
+    NSString* propertyString;
+    switch(property) {
+        case CSTaskProperty_assignedID:
+            propertyString = @"assignedID";
+            break;
+        case CSTaskProperty_completed:
+            propertyString = @"completed";
+            break;
+        case CSTaskProperty_concatenatedID:
+            propertyString = @"concatenatedID";
+            break;
+        case CSTaskProperty_deviceID:
+            propertyString = @"deviceID";
+            break;
+        case CSTaskProperty_tag:
+            propertyString = @"tag";
+            break;
+        case CSTaskProperty_taskAudio:
+            propertyString = @"taskAudio";
+            break;
+        case CSTaskProperty_taskDescription:
+            propertyString = @"taskDescription";
+            break;
+        case CSTaskProperty_taskImages_NSDataArray_JPEG:
+            propertyString = @"taskImages_NSDataArray_JPEG";
+            break;
+        case CSTaskProperty_taskPriority:
+            propertyString = @"taskPriority";
+            break;
+        case CSTaskProperty_taskTitle:
+            propertyString = @"taskTitle";
+            break;
+        case CSTaskProperty_UUID:
+            propertyString = @"UUID";
+            break;
+        default:
+            break;
+    }
+    
+    return propertyString;
+}
+
+- (id)valueForProperty:(CSTaskProperty)property {
+    switch(property) {
+        case CSTaskProperty_assignedID:
+            return self.assignedID;
+            break;
+        case CSTaskProperty_completed:
+            return [NSNumber numberWithBool:self.completed];
+            break;
+        case CSTaskProperty_concatenatedID:
+            return self.concatenatedID;
+            break;
+        case CSTaskProperty_deviceID:
+            return self.deviceID;
+            break;
+        case CSTaskProperty_tag:
+            return self.tag;
+            break;
+        case CSTaskProperty_taskAudio:
+            return self.taskAudio;
+            break;
+        case CSTaskProperty_taskDescription:
+            return self.taskDescription;
+            break;
+        case CSTaskProperty_taskImages_NSDataArray_JPEG:
+            return self.taskImages_NSDataArray_JPEG;
+            break;
+        case CSTaskProperty_taskPriority:
+            return [NSNumber numberWithInteger:self.taskPriority];
+            break;
+        case CSTaskProperty_taskTitle:
+            return self.taskTitle;
+            break;
+        case CSTaskProperty_UUID:
+            return self.UUID;
+            break;
+        default:
+            return nil;
+    }
 }
 
 @end

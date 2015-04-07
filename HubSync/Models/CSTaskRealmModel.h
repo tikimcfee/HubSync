@@ -51,6 +51,9 @@ typedef NS_ENUM(NSInteger, CSTaskPriority)
 - (void) addComment: (CSCommentRealmModel *) newComment;
 - (void) addRevision:(CSTaskRevisionRealmModel*)revision;
 
-+ (NSMutableArray*)getTransientTaskList: (NSString*)user withTag: (NSString*)tag completionStatus: (BOOL) completed ;
++ (NSMutableArray*)getTransientTaskList: (NSString*)user withTag: (NSString*)tag completionStatus: (BOOL) completed;
+
++ (NSString*)stringForProperty:(CSTaskProperty)property;
+- (id)valueForProperty:(CSTaskProperty)property;
 
 @end

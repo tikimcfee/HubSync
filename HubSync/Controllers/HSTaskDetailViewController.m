@@ -12,12 +12,11 @@
 
 @interface HSTaskDetailViewController ()
 
-@property (weak, nonatomic) CSTaskRealmModel* sourceTask;
+@property (strong, nonatomic) CSTaskRealmModel* sourceTask;
 @property (strong, nonatomic) AVAudioPlayer* audioPlayer;
 
-@property (strong) NSData* nullData;
-
-@property (assign) BOOL descriptionChanged;
+@property (strong, nonatomic) CSTaskRevisionRealmModel* currentRevisions;
+@property (strong, nonatomic) NSMutableDictionary* unsavedChanges;
 
 @end
 
@@ -50,6 +49,8 @@
 //                                               object:nil];
     
     [_taskPriorityBubble setWantsLayer:YES];
+    _currentRevisions = [CSTaskRevisionRealmModel new];
+    _unsavedChanges = [NSMutableDictionary new];
 }
 
 - (void)dealloc {
@@ -57,18 +58,13 @@
 }
 
 #pragma mark - Textview delegate
-
 - (BOOL)textView:(NSTextView *)textView shouldChangeTextInRange:(NSRange)affectedCharRange replacementString:(NSString *)replacementString {
-    
-    _descriptionChanged = YES;
-    
+    [_unsavedChanges setObject:textView.string forKey:[NSNumber numberWithInt:CSTaskProperty_taskDescription]];
     return YES;
 }
 
 - (BOOL)textView:(NSTextView *)textView shouldChangeTextInRanges:(NSArray *)affectedRanges replacementStrings:(NSArray *)replacementStrings {
-    
-    _descriptionChanged = YES;
-    
+    [_unsavedChanges setObject:textView.string forKey:[NSNumber numberWithInt:CSTaskProperty_taskDescription]];
     return YES;
 }
 
@@ -141,7 +137,7 @@
     [self.audioPlayer play];
 }
 
-#pragma mark - Notifications
+#pragma mark - Notifications
 - (void)newTaskDetailSelected:(NSNotification*)notification {
     if([notification.object isKindOfClass:[CSTaskRealmModel class]]) {
         _sourceTask = notification.object;
@@ -197,36 +193,19 @@
 }
 
 - (IBAction)saveEdits:(id)sender {
-    if(! _descriptionChanged) {
-        return;
+    
+    NSArray* allChanges = [_unsavedChanges allKeys];
+    for(NSNumber* property in allChanges) {
+        [_currentRevisions forTask:_sourceTask
+                    reviseProperty:[property integerValue]
+                                to:[_unsavedChanges objectForKey:property]];
     }
+    [_currentRevisions save:_sourceTask];
+    [_sourceTask addRevision:_currentRevisions];
     
-    CSTaskRevisionRealmModel* newRevision = [CSTaskRevisionRealmModel new];
-    NSString* U = [NSString stringWithFormat:@"%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c",
-                   arc4random_uniform(25)+97,
-                   arc4random_uniform(25)+97,
-                   arc4random_uniform(25)+97,
-                   arc4random_uniform(25)+97,
-                   arc4random_uniform(25)+97,
-                   arc4random_uniform(25)+97,
-                   arc4random_uniform(25)+97,
-                   arc4random_uniform(25)+97,
-                   arc4random_uniform(25)+65,
-                   arc4random_uniform(25)+65,
-                   arc4random_uniform(25)+65,
-                   arc4random_uniform(25)+65,
-                   arc4random_uniform(25)+65,
-                   arc4random_uniform(25)+65,
-                   arc4random_uniform(25)+65];
-
-    newRevision.revisionID = [NSString stringWithFormat:@"%@_%ld", U, _sourceTask.revisions.count];
-    newRevision.revisionDate = [NSDate new];
+    _unsavedChanges = [NSMutableDictionary new];
+    _currentRevisions = [CSTaskRevisionRealmModel new];
     
-    NSMutableDictionary* newRevisions = [NSMutableDictionary new];
-    [newRevisions setObject:_taskDescriptionTextView.string forKey:@"taskDescription"];
-    newRevision.changesDictionary = [NSKeyedArchiver archivedDataWithRootObject:newRevisions];
-    
-    [_sourceTask addRevision:newRevision];
     [self reloadTableViews];
 }
 
