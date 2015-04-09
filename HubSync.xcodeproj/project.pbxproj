@@ -15,6 +15,7 @@
 		45AB07931AD436DA00FE9614 /* HSRevisionViewerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AB07921AD436DA00FE9614 /* HSRevisionViewerController.m */; };
 		45AB07961AD43DFF00FE9614 /* HSRevisionViewerWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AB07951AD43DFF00FE9614 /* HSRevisionViewerWindowController.m */; };
 		7407A8151AD31ACC00FE5D4D /* CSTaskRevisionRealmModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407A8141AD31ACC00FE5D4D /* CSTaskRevisionRealmModel.m */; };
+		74098E761AD702480081C69C /* CSTaskMediaRealmModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 74098E751AD702480081C69C /* CSTaskMediaRealmModel.m */; };
 		7483389A1AC9C0C300C3F5FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 748338991AC9C0C300C3F5FD /* AppDelegate.m */; };
 		7483389C1AC9C0C300C3F5FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7483389B1AC9C0C300C3F5FD /* main.m */; };
 		7483389F1AC9C0C300C3F5FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7483389E1AC9C0C300C3F5FD /* ViewController.m */; };
@@ -99,6 +100,8 @@
 		45AB07951AD43DFF00FE9614 /* HSRevisionViewerWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSRevisionViewerWindowController.m; path = Controllers/HSRevisionViewerWindowController.m; sourceTree = "<group>"; };
 		7407A8131AD31ACC00FE5D4D /* CSTaskRevisionRealmModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTaskRevisionRealmModel.h; sourceTree = "<group>"; };
 		7407A8141AD31ACC00FE5D4D /* CSTaskRevisionRealmModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTaskRevisionRealmModel.m; sourceTree = "<group>"; };
+		74098E741AD702480081C69C /* CSTaskMediaRealmModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTaskMediaRealmModel.h; sourceTree = "<group>"; };
+		74098E751AD702480081C69C /* CSTaskMediaRealmModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTaskMediaRealmModel.m; sourceTree = "<group>"; };
 		748338931AC9C0C300C3F5FD /* HubSync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HubSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		748338971AC9C0C300C3F5FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		748338981AC9C0C300C3F5FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -323,6 +326,8 @@
 				748338C81AC9C19C00C3F5FD /* CSTaskTransientObjectStore.m */,
 				7407A8131AD31ACC00FE5D4D /* CSTaskRevisionRealmModel.h */,
 				7407A8141AD31ACC00FE5D4D /* CSTaskRevisionRealmModel.m */,
+				74098E741AD702480081C69C /* CSTaskMediaRealmModel.h */,
+				74098E751AD702480081C69C /* CSTaskMediaRealmModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -587,6 +592,7 @@
 				74BE6FC11ACC73540048B1DC /* EZAudioPlotGL.m in Sources */,
 				748338F11AC9E0C500C3F5FD /* HSTaskListViewController.m in Sources */,
 				7483389C1AC9C0C300C3F5FD /* main.m in Sources */,
+				74098E761AD702480081C69C /* CSTaskMediaRealmModel.m in Sources */,
 				74BE6FC71ACC73540048B1DC /* TPCircularBuffer.c in Sources */,
 				748338E01AC9C61900C3F5FD /* CSSessionManager.m in Sources */,
 				748338CE1AC9C19C00C3F5FD /* CSTaskTransientObjectStore.m in Sources */,

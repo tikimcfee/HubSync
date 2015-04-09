@@ -230,6 +230,11 @@
 - (IBAction)saveEdits:(id)sender {
     
     NSArray* allChanges = [_unsavedChanges allKeys];
+    
+    if(allChanges.count == 0){
+        return;
+    }
+    
     for(NSNumber* property in allChanges) {
         [_currentRevisions forTask:_sourceTask
                     reviseProperty:[property integerValue]
